@@ -30,6 +30,10 @@ $white: #fff;
 $navbar-inverse-link-color: #5AADBB;
 $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
+ul li::before {
+  content: none !important;
+}
+
 /*----------------------------------------
   3. Global
 ----------------------------------------*/
