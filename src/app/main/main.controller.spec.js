@@ -9,9 +9,16 @@
       vm = _$controller_('MainController');
     }));
 
-    it('should define 4 awesome things', function() {
-      expect(angular.isArray(vm.awesomeThings)).toBeTruthy();
-      expect(vm.awesomeThings.length === 4).toBeTruthy();
+    it('should toggle the nav menu', function() {
+      expect(vm.showNavMenu).toBe(false);
+
+      vm.toggleNavMenu();
+
+      expect(vm.showNavMenu).toBe(true);
+
+      vm.toggleNavMenu();
+      
+      expect(vm.showNavMenu).toBe(false);
     });
   });
 })();

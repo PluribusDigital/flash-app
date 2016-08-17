@@ -9,12 +9,11 @@
   function MainController() {
     var vm = this;
 
-    vm.awesomeThings = [{'name':'540','url': 'https://540.co'}, {'name':'Yeoman','url': 'http://yeoman.io'}, {'name':'AngularJS','url': 'https://angularjs.org'}, {'name':'Gulp','url': 'http://gulpjs.com'}];
+    vm.showNavMenu = false;
 
-    activate();
-
-    function activate() {
-
+    vm.toggleNavMenu = function() {
+      vm.showNavMenu = !vm.showNavMenu;
+      console.log("Show nav? ", vm.showNavMenu);
     }
 
   }
