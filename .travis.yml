@@ -22,6 +22,7 @@ script:
 after_success:
 - cp coverage/*/lcov.info .
 - codeclimate-test-reporter < lcov.info
+- gulp
 - ./deploy.sh
 deploy:
   provider: s3
