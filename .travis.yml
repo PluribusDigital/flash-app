@@ -23,6 +23,15 @@ after_success:
 - cp coverage/*/lcov.info .
 - codeclimate-test-reporter < lcov.info
 - ./deploy.sh
+deploy:
+  provider: s3
+  access_key_id: $DEPLOY_AWS_ACCESS_KEY_ID_DEV
+  secret_access_key: $DEPLOY_AWS_ACCESS_KEY_DEV
+  bucket: $TRAVIS_BRANCH.flash-app.stsilabs
+  skip_cleanup: true
+  local_dir: dist
+  on:
+    branch: develop
 notifications:
   slack:
     secure:
