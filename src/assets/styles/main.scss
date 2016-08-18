@@ -17,6 +17,52 @@
     height: 300px;
     background-color: #f1f1f1;
     padding: 10px;
+    display: inline-block;
+    .stats-title {
+      width: 100%;
+      height: 15%;
+      padding: 5px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #0071bc;
+    }
+    .stats-donut {
+      width: 100%;
+      height: 55%;
+      padding: 27.5%;
+    }
+    .stats-metrics {
+      width: 100%;
+      height: 30%;
+      padding-left:10%;
+      display: inline-block;
+      .metric {
+        width: 30%;
+        float: left;
+        height: 100%;
+        margin-left: 1%;
+        .number {
+          height: 50%;
+          width: 85%;
+          border-radius: 50%;
+          text-align: center;
+          padding-top: 25%;
+          font-weight: bold;
+          color: #fff;
+        }
+        .total {background-color: #fdb81e;}
+        .given {background-color: #3e94cf;}
+        .received {background-color: #00f6b8;}
+        .label {
+          height: 50%;
+          width: 100%;
+          margin-left: 5px;
+          color: #5b616b;
+          font-weight: normal;
+        }
+      }
+    }
   }
   .notification-section {
     margin-left: -5%;

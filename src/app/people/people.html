@@ -24,11 +24,11 @@
   </div>
   <div class="people-grid usa-grid">
     <div class="tile usa-width-one-third usa-grid" ng-repeat="person in vm.peopleList">
-      <div class="user-img usa-width-one-half">
-        <img src="/assets/images/540-logo.png" alt="" />
+      <div class="user-img usa-width-one-half usa-grid">
+        <span class="usa-width-one-whole"><img src="/assets/images/540-logo.png" alt="" /></span>
         <div class="rec-counts">
-          <div class="given">5</div>
-          <div class="received">9</div>
+          <div class="given" tooltip="Recommendations Given" tooltip-placement="bottom">5</div>
+          <div class="received" tooltip="Recommendations Received" tooltip-placement="bottom">9</div>
         </div>
       </div>
       <div class="user-details usa-width-one-half">
