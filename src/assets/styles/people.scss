@@ -1,0 +1,119 @@
+/*----------------------------------------
+  People
+----------------------------------------*/
+
+.people-home {
+  font-family: 'Source Sans Pro';
+  margin-left: 200px;
+  padding: 20px 0 0 40px;
+  .people-header {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    .people-title {
+      float: left;
+      padding-top: 10px;
+      width: 30%;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #0071bc;
+    }
+    .people-filters {
+      width: 70%;
+      float: right;
+      display: inline-block;
+      .filter {
+        float: left;
+        width: 35%;
+        display: inline-block;
+        span {
+          width: 25%;
+          float: left;
+          padding: 12px 5px 0 0;
+          text-align: right;
+        }
+        select {
+          width: 75%;
+          float: right;
+        }
+      }
+      .view-type {
+        float: right;
+        width: 24%;
+        margin-left: 6%;
+        i {
+          font-size: 24px;
+          padding: 12px;
+        }
+        i:hover {
+          color: #0071bc;
+        }
+      }
+    }
+  }
+  .people-grid {
+    margin-left: -3%;
+    .tile {
+      margin: 6px;
+      border: 1px solid #d8d8d8;
+      border-radius: 3px;
+      height: 160px;
+      padding: 20px;
+      .user-img {
+        img {
+          border-radius: 60px;
+          height: 110px;
+        }
+        .rec-counts {
+          height: 40px;
+          position: relative;
+          bottom: 18px;
+          display: inline-block;
+          width: 60%;
+          margin-left: 13%;
+          color: #ffffff;
+          font-weight: bold;
+          .given {
+            width: 30px; height: 30px;
+            float: left;
+            background-color: #3e94cf;
+            border-radius: 15px;
+            padding: 6px 0 0 11px;
+          }
+          .received {
+            width: 30px; height: 30px;
+            float: right;
+            background-color: #00f6b8;
+            border-radius: 15px;
+            padding: 6px 0 0 11px;
+          }
+        }
+      }
+      .user-details {
+        .name {
+          color: #0071bc;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .title {
+          font-size: 14px;
+        }
+        .department {
+          font-size: 12px;
+          font-style: italic;
+        }
+        button {
+          margin-top: 20px;
+          font-size: 14px;
+        }
+      }
+    }
+    .tile:hover {
+      box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+    }
+  }
+  .people-list {
+
+  }
+}
