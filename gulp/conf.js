@@ -12,10 +12,29 @@ var gutil = require('gulp-util');
  *  The main paths of your project handle these with care
  */
 exports.paths = {
+  base: '.',
   src: 'src',
   dist: 'dist',
   tmp: '.tmp',
   e2e: 'e2e'
+};
+
+exports.images = {
+  vendor_images: [
+
+  ]
+};
+
+exports.fonts = {
+  vendor_fonts: [
+    '/node_modules/uswds/dist/fonts/*'
+  ]
+};
+
+exports.styles = {
+  vendor_styles: [
+    '/node_modules/uswds/dist/css/uswds.min.css'
+  ]
 };
 
 exports.scripts = {

@@ -28,10 +28,18 @@ var buildStyles = function() {
     includePaths: bourbon.includePaths
   };
 
-  var injectFiles = gulp.src([
+  var injectPaths = [
     path.join(conf.paths.src, '/assets/**/*.scss'),
     path.join('!' + conf.paths.src, '/app/index.scss')
-  ], { read: false });
+  ];
+
+  for (var i = 0, len = conf.styles.vendor_styles.length; i < len; i++) {
+    injectPaths.push(path.join(conf.paths.base, conf.styles.vendor_styles[i]));
+  }
+
+  console.log(injectPaths);
+
+  var injectFiles = gulp.src(injectPaths, { read: false });
 
   var injectOptions = {
     transform: function(filePath) {
@@ -43,11 +51,15 @@ var buildStyles = function() {
     addRootSlash: false
   };
 
+  var srcPaths = [
+    path.join(conf.paths.src, '/assets/**/index.scss')
+  ];
 
-  return gulp.src([
-    path.join(conf.paths.src, '/assets/**/index.scss'),
-    path.join(conf.paths.src, '../node_modules/uswds/dist/css/uswds.min.css')
-  ])
+  for (var i = 0, len = conf.styles.vendor_styles.length; i < len; i++) {
+    srcPaths.push(path.join(conf.paths.base, conf.styles.vendor_styles[i]));
+  }
+
+  return gulp.src(srcPaths)
     .pipe($.inject(injectFiles, injectOptions))
     .pipe(wiredep(_.extend({}, conf.wiredep)))
     .pipe($.sourcemaps.init())

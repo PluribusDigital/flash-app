@@ -78,9 +78,13 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
 });
 
-gulp.task('usfonts', function() {
-    return gulp.src(path.join(conf.paths.src, '../node_modules/uswds/dist/fonts/*'))
-      .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
+gulp.task('vendorfonts-dist', function() {
+  var srcPaths = [];
+  for (var i = 0, len = conf.fonts.vendor_fonts.length; i < len; i++) {
+    srcPaths.push(path.join(conf.paths.base, conf.fonts.vendor_fonts[i]));
+  }
+  return gulp.src(srcPaths)
+    .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
 });
 
 // Only applies for google analytics
@@ -106,4 +110,4 @@ gulp.task('clean', function () {
   return $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')]);
 });
 
-gulp.task('build', ['html', 'usfonts', 'fonts', 'ga', 'other']);
+gulp.task('build', ['html', 'vendorfonts-dist', 'fonts', 'ga', 'other']);
