@@ -20,12 +20,27 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body>
+  <body class="usa-sans" ng-controller="AppController as vm">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="usa-sans" ui-view></div>
+    <div ng-if="vm.state.current.name != 'login'">
+      <header class="app-header" role="banner">
+        <div class="site-navbar usa-grid-full">
+          <div class="usa-width-one-third">
+            <a class="menu-toggle" href ng-click="vm.toggleNavMenu()"><i class="fa fa-bars"></i></a>
+            <span class="app-name">Name of Application Here</span>
+          </div>
+          <div class="usa-width-one-third logo">
+            <img src="/assets/images/dhs-seal.png">
+          </div>
+        </div>
+      </header>
+
+      <nav-menu ng-show="vm.showNavMenu"></nav-menu>
+    </div>
+    <div ui-view></div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
