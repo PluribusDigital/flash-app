@@ -28,6 +28,7 @@ _In order for individuals to successfully collaborate as a team, it is vital to 
 11.	Help others and ask for help from others.
   * Don’t struggle for more than 15 minutes without asking for help. 
 11. Follow README.md for each repo for contributing, style, etc.
+12. A pull request should usually equate to completing a user story/card
 12.	Reviews and Retrospectives (R&Rs) are critical to our process. Everyone participates in them.
   * Reviews: 
     - Review the work completed and secure the agreement of “Done.”
