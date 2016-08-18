@@ -1,7 +1,9 @@
 {
   "name": "flashApp",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "bourbon": "^4.2.7"
+  },
   "scripts": {
     "test": "gulp test"
   },

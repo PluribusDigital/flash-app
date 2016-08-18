@@ -11,6 +11,8 @@ var $ = require('gulp-load-plugins')();
 var wiredep = require('wiredep').stream;
 var _ = require('lodash');
 
+var bourbon = require("bourbon");
+
 gulp.task('styles-reload', ['styles'], function() {
   return buildStyles()
     .pipe(browserSync.stream());
@@ -22,7 +24,8 @@ gulp.task('styles', function() {
 
 var buildStyles = function() {
   var sassOptions = {
-    style: 'expanded'
+    style: 'expanded',
+    includePaths: bourbon.includePaths
   };
 
   var injectFiles = gulp.src([
