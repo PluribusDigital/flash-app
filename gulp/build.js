@@ -78,6 +78,11 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
 });
 
+gulp.task('usfonts', function() {
+    return gulp.src(path.join(conf.paths.src, '../node_modules/uswds/dist/fonts/*'))
+      .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
+});
+
 // Only applies for google analytics
 gulp.task('ga', function () {
   return gulp.src(conf.paths.src + '/assets/scripts/ga.js')
@@ -101,4 +106,4 @@ gulp.task('clean', function () {
   return $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')]);
 });
 
-gulp.task('build', ['html', 'fonts', 'ga', 'other']);
+gulp.task('build', ['html', 'usfonts', 'fonts', 'ga', 'other']);

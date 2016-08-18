@@ -45,7 +45,8 @@ var buildStyles = function() {
 
 
   return gulp.src([
-    path.join(conf.paths.src, '/assets/**/index.scss')
+    path.join(conf.paths.src, '/assets/**/index.scss'),
+    path.join(conf.paths.src, '../node_modules/uswds/dist/css/uswds.min.css')
   ])
     .pipe($.inject(injectFiles, injectOptions))
     .pipe(wiredep(_.extend({}, conf.wiredep)))
