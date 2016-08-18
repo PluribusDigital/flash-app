@@ -19,6 +19,12 @@
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'vm'
+      })
+      .state('people', {
+        url: '/people',
+        templateUrl: 'app/people/people.html',
+        controller: 'PeopleController',
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/');
