@@ -21,7 +21,7 @@ exports.paths = {
 
 exports.images = {
   vendor_images: [
-
+    '/node_modules/uswds/dist/img/*'
   ]
 };
 
