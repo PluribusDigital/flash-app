@@ -20,10 +20,7 @@
   1. Variables
 ----------------------------------------*/
 
-$brand-540: #222;
-$black: #000;
-$grey: #ccc;
-$white: #fff;
+@import 'variables';
 
 /*----------------------------------------
   2. Bootstrap overrides
@@ -59,12 +56,10 @@ body {
 /*----------------------------------------
   4. Main
 ----------------------------------------*/
-$app-header-height: 50px;
-$border-color: rgb(151, 151, 151);
 
 header.app-header {
   color: white;
-  @include linear-gradient(to right, #205493, #112e51);
+  @include linear-gradient(to right, #376996, #112e51);
   height: $app-header-height;
   padding: 0 1.5rem;
 
@@ -89,170 +84,6 @@ header.app-header {
       margin-top: 5px;
       width: 40px;
       height: 40px;
-    }
-  }
-}
-
-$app-menu-width: 200px;
-
-.app-menu {
-  background-color: white;
-  border-right: solid 1px $border-color;
-  position: fixed;
-  top: 50px;
-  left: 0;
-  width: $app-menu-width;
-  min-height: 100%;
-  height: 100%;
-
-  .menu-header {
-    font-size: 1.25rem;
-    padding: 0.85rem 1.8rem;
-    color: rgb(216, 216, 216);
-    text-transform: uppercase;
-    border-bottom: solid 1px black;
-  }
-
-  .usa-sidenav-list {
-    li {
-      font-size: 1.25rem;
-
-      a {
-        font-weight: normal;
-        text-transform: uppercase;;
-      }
-
-      a.usa-current {
-        font-weight: bold;
-      }
-    }
-  }
-
-  .profile-actions {
-    position: fixed;
-    width: $app-menu-width;
-    bottom: 0;
-    left: 0;
-  }
-
-  .profile-image {
-    border-radius: 50%;
-    border: solid 1px $border-color;
-    height: 50px;
-    width: 50px;
-    overflow: hidden;
-    margin: 0 auto;
-
-    .no-profile-image {
-      background-color: rgb(216, 216, 216);
-      color: white;
-      width: 50px;
-      height: 50px;
-      text-align: center;
-    }
-  }
-
-  .profile-name {
-    text-align: center;
-    margin-top: 0.5em;
-    margin-bottom: 2em;
-    font-size: 1rem;
-  }
-
-  .profile-link,
-  .profile-link:hover {
-    color: black;
-  }
-
-  .profile-link {
-    display: block;
-    text-align: center;
-    margin-bottom: 0.75em;
-    font-size: 1.5rem;
-  }
-
-}
-
-/*----------------------------------------
-  5. Login
-----------------------------------------*/
-
-.login-home {
-  font-family: 'Source Sans Pro';
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #112e51;
-  .login-content {
-    margin-top: 5%;
-    color: #ffffff;
-    .top-image {
-      margin-bottom: 20px;
-      i {
-        font-size: 70px;
-      }
-    }
-    .left-div {
-      font-size: 14px;
-      margin-bottom: 20px;
-      .app-name {
-        font-size: 36px;
-        font-family: 'Merriweather';
-      }
-    }
-    .center-div {
-      color: #000000;
-      margin-bottom: 20px;
-      .login-box {
-        padding: 40px;
-        border-top: 5px solid #e31c3d;
-        background-color: #ffffff;
-        line-height: .7;
-        .sign-in {
-          font-size: 26px;
-          .sub-text {
-            font-size: 12px;
-          }
-        }
-        .login-input {
-          margin-top: 20px;
-          margin-bottom: 20px;
-          .input-header {
-            font-size: 14px;
-          }
-          .show-password {
-            cursor: pointer;
-            float: right;
-            margin-top: 2px;
-            font-size: 14px;
-            color: #205493;
-          }
-          .show-password:hover {
-            text-decoration: underline;
-          }
-        }
-        .forgot {
-          cursor: pointer;
-          font-size: 14px;
-          color: #205493;
-        }
-      }
-    }
-    .right-div {
-      padding-left: 50px;
-      font-size: 14px;
-      .need-access {
-        font-size: 20px;
-      }
-      .sign-up {
-        margin-top: 20px;
-        button {
-          width: 100px;
-          margin: 20px 10px 0 10px;
-        }
-      }
     }
   }
 }

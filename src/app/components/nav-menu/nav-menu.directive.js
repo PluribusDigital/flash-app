@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-console.log("BLAH!");
+
   angular
     .module('flashApp')
     .directive('navMenu', function () {
