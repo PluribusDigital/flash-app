@@ -15,3 +15,4 @@ _The DoD is a clear and concise agreed upon list of common satisfaction criteria
 - [ ] Acceptable defect severity levels 
 - [ ] Unit test coverage - 80% coverage / 100% passing
 - [ ] Documentation - readme update; api docs (swagger); soft target for code comment
+- [ ] At least one peer reviewed and accepted, merged into develop branch (passing CI)
