@@ -17,7 +17,7 @@ _In order for individuals to successfully collaborate as a team, it is vital to 
 7.	Prioritize and respect feedback.
   * We will all give feedback, receive feedback, and act on the feedback together. 
 8.	Listen to what others are saying and strive to understand each other’s perspective. 
-  * Do not jump to conclusions – ask questions. 
+  * Do not [jump to conclusions]() – ask questions. 
   * Debate the merit of the idea, not the person.
 9.	Respect the “do not disturb” signal. 
   * If headphones are in, the person is focused and should not be interrupted. 
@@ -27,6 +27,7 @@ _In order for individuals to successfully collaborate as a team, it is vital to 
   * Remember, business value and feasibility are top priority.
 11.	Help others and ask for help from others.
   * Don’t struggle for more than 15 minutes without asking for help. 
+11. Follow README.md for each repo for contributing, style, etc.
 12.	Reviews and Retrospectives (R&Rs) are critical to our process. Everyone participates in them.
   * Reviews: 
     - Review the work completed and secure the agreement of “Done.”
@@ -35,6 +36,6 @@ _In order for individuals to successfully collaborate as a team, it is vital to 
     - Tone: Happy, energetic, upbeat.
   * Retrospectives:
     - Review the process and identify failures, mistakes, blocks, obstacles.
-    - Discuss the process.
+    - Discuss the process and actions.
     - Don’t play the blame game, get personal, or complain without offering solutions.
     - Tone: Honest, reflective, pro-active.
