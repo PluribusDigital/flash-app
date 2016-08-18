@@ -77,6 +77,14 @@ header.app-header {
     line-height: $app-header-height;
   }
 
+  @media screen and (max-width: 600px) {
+    .logo {
+      position: fixed;
+      top: 0;
+      right: 5px;
+    }
+  }
+
   .logo {
     text-align: center;
 
