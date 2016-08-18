@@ -61,9 +61,20 @@
       height: 160px;
       padding: 20px;
       .user-img {
-        img {
-          border-radius: 60px;
-          height: 110px;
+        width: 50%;
+        margin: 0px;
+        padding: 0px;
+        span {
+          min-width: 110px;
+          margin: 0px;
+          padding: 0px;
+          img {
+            margin: 0px;
+            padding: 0px;
+            border-radius: 60px;
+            width: 110px;
+            height: 110px;
+          }
         }
         .rec-counts {
           height: 40px;
@@ -75,6 +86,7 @@
           color: #ffffff;
           font-weight: bold;
           .given {
+            cursor: pointer;
             width: 30px; height: 30px;
             float: left;
             background-color: #3e94cf;
@@ -82,6 +94,7 @@
             padding: 6px 0 0 11px;
           }
           .received {
+            cursor: pointer;
             width: 30px; height: 30px;
             float: right;
             background-color: #00f6b8;
