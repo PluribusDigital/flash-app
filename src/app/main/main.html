@@ -1,0 +1,20 @@
+<div class="landing-page usa-grid">
+  <div class="landing-header usa-width-one-whole">All Notifications</div>
+  <div class="usa-grid">
+    <div class="notification-section usa-width-three-fourths">
+      <div class="notification usa-grid" ng-repeat="notification in vm.mockNotifications">
+        <div class="notification-details usa-width-five-sixths usa-grid">
+          <span class="type usa-width-one-whole"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp{{notification.type}}</span>
+          <span class="by usa-width-one-whole">{{notification.by}}</span>
+          <span class="message usa-width-one-whole">{{notification.message}}</span>
+        </div>
+        <div class="notification-actions usa-width-one-sixth">
+          <button type="button" name="button">Test</button>
+          <button type="button" class="usa-button-outline" name="button">View</button>
+          <button type="button" class="usa-button-outline" name="button">Details</button>
+        </div>
+      </div>
+    </div>
+    <div class="user-stats usa-width-one-fourth">User Stats Will Go Here</div>
+  </div>
+</div>
