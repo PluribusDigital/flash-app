@@ -11,10 +11,11 @@
 
 ## Goals of Sprint Zero
 
-* Assemble the (scrum) team 
+* Assemble the team, define roles & shared understanding of roles & responsibilities
 * Train and coach a team that is entirely new to agile so that they’re familiar with the basic concepts, can experience the new working rhythm and cadence, etc. 
-* Set a project vision and build an initial product backlog
-* Populate the product backlog with a few high-level items in preparation for the first iteration planning session
-* Identify team norms, grooming cadences, areas/iterations
-* Align team processes  with overarching project management frameworks or SDLCs 
+* Set a (DRAFT) project vision and build an initial product backlog
+* Populate the (technical stories) product backlog with a few high-level items in preparation for the first iteration planning session
+* Identify team norms, grooming cadences, areas/iterations (in 4-6 hours)
+* Align team processes with overarching project management frameworks or SDLCs (artifacts, handoffs, etc)
 * Set up the infrastructure to support development and testing
+* Create definition of done, and definition of "MVP"
