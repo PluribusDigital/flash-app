@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  // describe('controllers', function(){
+  // describe('MainController', function(){
   //   var vm;
   //
   //   beforeEach(module('flashApp'));

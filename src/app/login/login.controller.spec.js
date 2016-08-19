@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  describe('controllers', function(){
+  describe('LoginController', function(){
     var vm;
     var $state;
 
