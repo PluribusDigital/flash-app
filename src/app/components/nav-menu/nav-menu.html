@@ -1,9 +1,9 @@
 <div class="app-menu">
   <div class="menu-header"><a class="close-button" href ng-click="vm.hideMenu()"><i class="fa fa-bars"></i></a> Menu</div>
   <ul class="usa-sidenav-list">
-    <li><a href="#/home" class="usa-current"><i class="fa fa-fw"></i> Home</a></li>
-    <li><a href><i class="fa fa-trophy"></i> Recommendations</a></li>
-    <li><a href="#/people"><i class="fa fa-users"></i> People</a></li>
+    <li><a href="#/home" ng-class="{'usa-current': vm.isInSection('home')}"><i class="fa fa-fw"></i> Home</a></li>
+    <li><a href ng-class="{'usa-current': vm.isInSection('kudos')}"><i class="fa fa-trophy"></i> Recommendations</a></li>
+    <li><a href="#/people" ng-class="{'usa-current': vm.isInSection('people')}"><i class="fa fa-users"></i> People</a></li>
   </ul>
 
   <ul class="profile-actions">

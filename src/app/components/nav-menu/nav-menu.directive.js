@@ -18,11 +18,15 @@
     });
 
   /* @ngInject */
-  function NavMenuController() {
+  function NavMenuController($state) {
     var vm = this;
 
     vm.hideMenu = function() {
       vm.menuVisible = false;
-    }
+    };
+
+    vm.isInSection = function(section) {
+      return $state.current.name.indexOf(section) == 0;
+    };
   }
 })();
