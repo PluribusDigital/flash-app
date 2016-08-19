@@ -1,19 +1,29 @@
 <div class="app-menu">
-  <div class="menu-header">Menu</div>
+  <div class="menu-header"><a class="close-button" href ng-click="vm.hideMenu()"><i class="fa fa-bars"></i></a> Menu</div>
   <ul class="usa-sidenav-list">
-    <li><a href="#/home" class="usa-current">Home</a></li>
-    <li><a href>Recommendations</a></li>
-    <li><a href="#/people">People</a></li>
+    <li><a href="#/home" class="usa-current"><i class="fa fa-fw"></i> Home</a></li>
+    <li><a href><i class="fa fa-trophy"></i> Recommendations</a></li>
+    <li><a href="#/people"><i class="fa fa-users"></i> People</a></li>
   </ul>
 
-  <div class="profile-actions">
-    <div class="profile-image">
-      <div class="no-profile-image">
+  <ul class="profile-actions">
+    <li class="my-profile">
+      <a href>
+        <div class="profile-image">
+          <div class="no-profile-image">
 
-      </div>
-    </div>
-    <div class="profile-name">John Doe</div>
-    <a href class="profile-link edit-profile" title="Update Your Profile"><i class="fa fa-gear"></i></a>
-    <a ng-href="/" class="profile-link logout" title="Logout"><i class="fa fa-sign-out"></i></a>
-  </div>
+          </div>
+        </div>
+        <div class="profile-name">John Doe</div>
+
+        <i class="fa fa-user"></i> <span class="label">My Profile</span>
+      </a>
+    </li>
+    <li class="edit-settings">
+      <a href title="Edit Your Settings"><i class="fa fa-gear"></i> <span class="label">Settings</span></a>
+    </li>
+    <li class="logout">
+      <a ng-href="/" class="profile-link" title="Logout"><i class="fa fa-sign-out"></i> <span class="label">Logout</span></a>
+    </li>
+  </ul>
 </div>
