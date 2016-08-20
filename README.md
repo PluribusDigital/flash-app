@@ -9,3 +9,5 @@ npm install
 bower install
 gulp serve
 ```
+
+Note: You may have to run `sudo npm install --global gulp-cli` 

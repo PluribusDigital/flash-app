@@ -6,4 +6,4 @@ coverage/
 .tmp/
 dist/
 **/.DS_Store
-**/.log
+*.log
