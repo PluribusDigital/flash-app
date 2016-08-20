@@ -11,3 +11,8 @@ gulp serve
 ```
 
 Note: You may have to run `sudo npm install --global gulp-cli` 
+
+## Running Tests
+
+TODO
+
