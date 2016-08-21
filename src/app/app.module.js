@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('flashApp', ['flashApp.core']);
+    .module('flashApp', ['flashApp.core', 'base64']);
 
 })();

@@ -3,25 +3,16 @@
 
   describe('LoginController', function(){
     var vm;
-    var $state;
 
     beforeEach(module('flashApp'));
     beforeEach(inject(function(_$controller_) {
-      $state = {
-        go: function() {
-
-        }
-      };
-
-      spyOn($state, 'go');
-
-      vm = _$controller_('LoginController', {'$state': $state});
+      vm = _$controller_('LoginController');
     }));
 
-    it('should go to the home page when gotoApp() is called', function() {
-      vm.gotoApp();
-
-      expect($state.go).toHaveBeenCalledWith('home');
+    it('should go to the home page when login() is called', function() {
+      spyOn(vm, 'setCredentials').and.callThrough();
+      vm.login("gwashington", "george1");
+      expect(vm.setCredentials).toHaveBeenCalledWith("gwashington", "george1");
     });
   });
 })();
