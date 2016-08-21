@@ -6,11 +6,22 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($state) {
+  function LoginController($log, $rootScope, $state, userService) {
     var vm = this;
+    vm.setCredentials = setCredentials;
+    vm.login = login;
 
-    vm.gotoApp = function() {
-      $state.go('home');
+    function login(){
+      vm.setCredentials();
+      userService.users.loginUser().then(function(res){
+        $log.info("response:" + angular.toJson(res));
+      });
+    }
+
+
+    function setCredentials(){
+      $rootScope.username = vm.username;
+      $rootScope.password = vm.password;
     }
 
   }
