@@ -11,17 +11,19 @@
     vm.setCredentials = setCredentials;
     vm.login = login;
 
-    function login(){
-      vm.setCredentials();
+    function login(username, password){
+      vm.setCredentials(username, password);
       userService.users.loginUser().then(function(res){
-        $log.info("response:" + angular.toJson(res));
+        $log.info(angular.toJson(res));
+        $rootScope.loggedInUser = res;
+        $state.go('home');
       });
     }
 
 
-    function setCredentials(){
-      $rootScope.username = vm.username;
-      $rootScope.password = vm.password;
+    function setCredentials(username, password){
+      $rootScope.username = username;
+      $rootScope.password = password;
     }
 
   }

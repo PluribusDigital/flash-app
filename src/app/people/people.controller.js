@@ -13,7 +13,9 @@
     vm.getAllUsers();
 
     function getAllUsers(){
-      vm.peopleList = userService.getAllUsers();
+      userService.users.getAllUsers().then(function(res){
+        vm.peopleList = res;
+      });
     }
   }
 })();

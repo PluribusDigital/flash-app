@@ -14,12 +14,12 @@
         <span class="sub-text">or create an account</span>
         <div class="login-input">
           <span class="input-header">Username or email address</span></br>
-          <input type="text" name="name" value=""></br>
+          <input type="text" name="name" value="" ng-model="vm.username"></br>
           <span class="input-header">Password</span></br>
-          <input type="password" name="name" value="">
+          <input type="password" name="name" value="" ng-model="vm.password">
           <span class="show-password">Show password</span>
         </div>
-        <button type="button" name="button" ng-click="vm.login()">Sign in</button></br>
+        <button type="button" name="button" ng-click="vm.login(vm.username, vm.password)">Sign in</button></br>
         <span class="forgot">Forgot username?</span></br>
         <span class="forgot">Forgot password?</span>
       </div>

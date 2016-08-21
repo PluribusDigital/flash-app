@@ -23,22 +23,35 @@
 
       var requestParams = function(params) {
         var flashParams = params;
-        var userpassEncode = $base64.encode('gwashington:george1');
-        flashParams.responseType = 'json';
+        var userpassEncode = $base64.encode($rootScope.username + ':' + $rootScope.password);
+
         if (!flashParams.headers) {flashParams.headers = {};}
         flashParams.headers['Content-Type'] = 'application/json';
-        flashParams.headers['Authorization'] = 'Bearer ' + userpassEncode;
+        flashParams.headers['Authorization'] = 'Basic ' + userpassEncode;
         return flashParams;
       };
 
       var users = {
 
-        getUser: function () {
+        getUser: function (username) {
 
           return $http(requestParams({
               method: 'GET',
               cache: true,
-              url: client.routes.users + '/' + 'gwashington',
+              url: client.routes.users + '/' + username,
+              params: {
+                api_key: client.apiKey
+              }
+          }));
+
+        },
+
+        getAllUsers: function () {
+
+          return $http(requestParams({
+              method: 'GET',
+              cache: true,
+              url: client.routes.users,
               params: {
                 api_key: client.apiKey
               }
