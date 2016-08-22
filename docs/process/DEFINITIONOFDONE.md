@@ -22,3 +22,6 @@ _The DoD is a clear and concise agreed upon list of common satisfaction criteria
 |Section 508 Compliance Testing |N|Start w/USWDS - Use ng-aria|
 |Security Scanning|N | |
 |Code Quality Scanning |N | CodeClimate scan for Score of 3.2 minimum and no individual file at/below D|
+|Manual Exploratory and Automated Functional Testing |Y | Minumum smoke - maximum happy path for each story & some alt. paths|
+|Acceptable Defect Severity Levels |Y |TBD |
+|Unit Test Coverage |Y |80% coverage w/100% passing rate|
