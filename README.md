@@ -5,7 +5,7 @@
 ```
 - git clone https://github.com/STSILABS/flash-app.git
 - cd flash-app
-- cp /src/app/app.example.config.js /src/app/app.config.js
+- cp src/app/app.example.config.js src/app/app.config.js
 ```
 
 - Edit the app.config.js file with necessary variables (URL Base Route and API Key)
