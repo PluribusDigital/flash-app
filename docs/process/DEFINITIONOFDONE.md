@@ -7,6 +7,12 @@ _The DoD is a clear and concise agreed upon list of common satisfaction criteria
 - [ ] Usability testing?
 - [ ] Product Owner (PO) sign-off
 
+|DoD Criteria |Required for MVP(Y/N) |Commitment Level (if any) |
+|-------------|----------------------|--------------------------|
+|Client Alpha Testing |N | TBD|
+|Usability Testing |N |TBD |
+|Product Owner Sign-Off |Y |Each user story has PO sign-off upon completion|
+
 ## Product Quality
 - [ ] Section 508 compliance testing - Not required, but start with USWDS and will use ng-aria
 - [ ] Security scanning - Not for MVP?
@@ -17,7 +23,7 @@ _The DoD is a clear and concise agreed upon list of common satisfaction criteria
 - [ ] Documentation - readme update; api docs (swagger); soft target for code comment
 - [ ] At least one peer reviewed and accepted, merged into develop branch (passing CI)
 
-|DoD Criteria |Required for MVP (Y/N) | Commitment (if any)|
+|DoD Criteria |Required for MVP (Y/N) | Commitment Level (if any)|
 |-------------|-----------------|-----------|
 |Section 508 Compliance Testing |N|Start w/USWDS - Use ng-aria|
 |Security Scanning|N | |
