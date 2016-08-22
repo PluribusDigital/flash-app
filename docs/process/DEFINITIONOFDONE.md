@@ -25,3 +25,5 @@ _The DoD is a clear and concise agreed upon list of common satisfaction criteria
 |Manual Exploratory and Automated Functional Testing |Y | Minumum smoke - maximum happy path for each story & some alt. paths|
 |Acceptable Defect Severity Levels |Y |TBD |
 |Unit Test Coverage |Y |80% coverage w/100% passing rate|
+|Documentation |Y |README Update; API docs (Swagger); Soft target for code comments|
+|Peer Reviews |N |At least one peer review and acceptance; merge into development branch (passing CI)|
