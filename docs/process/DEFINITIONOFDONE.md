@@ -16,3 +16,9 @@ _The DoD is a clear and concise agreed upon list of common satisfaction criteria
 - [ ] Unit test coverage - 80% coverage / 100% passing
 - [ ] Documentation - readme update; api docs (swagger); soft target for code comment
 - [ ] At least one peer reviewed and accepted, merged into develop branch (passing CI)
+
+|DoD Criteria |Required for MVP (Y/N) | Commitment (if any)|
+|-------------|-----------------|-----------|
+|Section 508 Compliance Testing |N|Start w/USWDS - Use ng-aria|
+|Security Scanning|N | |
+|Code Quality Scanning |N | CodeClimate scan for Score of 3.2 minimum and no individual file at/below D|
