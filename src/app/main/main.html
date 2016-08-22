@@ -15,6 +15,9 @@
         </div>
       </div>
     </div>
+    <div class="create-kudo usa-width-one-fourth">
+      <button type="button" class="usa-button-outline" name="button" ng-click="vm.createKudo = true">Create New Kudo</button>
+    </div>
     <div class="user-stats usa-width-one-fourth">
       <div class="stats-title">Your Recognitions</div>
       <div class="stats-donut">
@@ -37,3 +40,36 @@
     </div>
   </div>
 </div>
+
+<modal-dialog show='vm.createKudo' dialog-title='Create New Kudo'>
+  <div class="kudo-modal-body">
+    <div class="user-lookup usa-grid">
+      <div class="lookup-label usa-width-one-fourth">
+        <p>User lookup:</p>
+      </div>
+      <div class="usa-width-three-fourths">
+      <form class="usa-search usa-search-small">
+        <div role="search">
+          <label class="usa-sr-only" for="search-field-small">Search small</label>
+          <input id="search-field-small" type="search" name="search" ng-model="vm.kudo.person">
+          <button type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </div>
+      </form>
+    </div>
+    </div>
+    <div class="kudo-content col-md-12">
+      <select class="" name="" ng-model="vm.kudo.type">
+        <option value="">Select an option...</option>
+        <option value="Good Job!">Good Job!</option>
+        <option value="Way to go!">Way to go!</option>
+      </select>
+      <textarea name="name" rows="8" cols="40" ng-model="vm.kudo.message"></textarea>
+    </div>
+    <div class="submit-kudo col-md-12">
+      <button type="button" class="usa-button-secondary" name="button">Cancel</button>
+      <button type="button" class="submit" name="button" ng-click="vm.giveKudo(vm.kudo)">Give Kudo</button>
+    </div>
+  </div>
+</modal-dialog>
