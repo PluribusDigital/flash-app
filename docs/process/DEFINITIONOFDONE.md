@@ -4,11 +4,11 @@ _The DoD is a clear and concise agreed upon list of common satisfaction criteria
 
 ## Customer
 
-| DoD Criteria | Required for MVP(Y/N) | Commitment Level (if any) |
-| -------------|----------------------|--------------------------|
-| Client Alpha Testing | N | TBD |
-| Usability Testing | N | TBD |
-| Product Owner Sign-Off | Y | Each user story has PO sign-off upon completion |
+| DoD Criteria           | Required for MVP(Y/N) | Commitment Level (if any)                       |
+| ---------------------- |---------------------- |-------------------------------------------------|
+| Client Alpha Testing   | N                     | TBD                                             |
+| Usability Testing      | N                     | TBD                                             |
+| Product Owner Sign-Off | Y                     | Each user story has PO sign-off upon completion |
 
 ## Product Quality
 
