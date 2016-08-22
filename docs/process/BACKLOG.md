@@ -13,7 +13,7 @@ The story card (see template below) includes:
   - (T)echnical feasibility: 
     * Red: Cannot be built within the challenge timeframe
     * Yellow: Only this could be built within the challenge timeframe
-    * Green: This and other features can be built within the challenge timefrae
+    * Green: This and other features can be built within the challenge timeframe
 
 ![example card](example_backlog_card.jpg)
 
