@@ -12,6 +12,13 @@
     text-transform: uppercase;
     color: #0071bc;
   }
+  .create-kudo {
+    text-align: center;
+    margin-bottom: 20px;
+    button {
+      width: 100%;
+    }
+  }
   .user-stats {
     margin: 0;
     height: 300px;
@@ -89,6 +96,53 @@
           width: 100%;
         }
       }
+    }
+  }
+}
+
+.kudo-modal-body {
+  width: 100%;
+  .user-lookup {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    .lookup-label {
+      font-size: 18px;
+    }
+  }
+  .kudo-content {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    select {
+      margin-bottom: 10px;
+    }
+    select, textarea {
+      max-width: none !important;
+      width: 100%;
+    }
+  }
+  .submit-kudo {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 10px;
+    .submit {
+      float: right;
+    }
+    .cancel {
+      float: left;
+    }
+    button {
+      width: 160px;
     }
   }
 }

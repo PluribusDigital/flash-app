@@ -17,7 +17,8 @@
     "angularytics": "~0.4.0",
     "angular": "~1.4.8",
     "lodash": "~4.15.0",
-    "angular-base64": "^2.0.5"
+    "angular-base64": "^2.0.5",
+    "ngModal": "^1.2.2"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.8"
