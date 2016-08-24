@@ -18,3 +18,10 @@ From wikipedia: "a product with just enough features to gather validated learnin
 
 * Perfect features
 * Bells and whistles
+
+## Key Criteria
+As a general rule, don't waste time on something unless...
+
+* Will this help us answer a BIG QUESTION?
+* Is there a REASONABLE WORKAROUND?
+* Is there a SIMPLER way to accomplish this?
