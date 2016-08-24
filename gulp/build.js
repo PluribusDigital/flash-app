@@ -78,25 +78,6 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
 });
 
-gulp.task('vendorfonts-dist', function() {
-  var srcPaths = [];
-  for (var i = 0, len = conf.fonts.vendor_fonts.length; i < len; i++) {
-    srcPaths.push(path.join(conf.paths.base, conf.fonts.vendor_fonts[i]));
-  }
-  return gulp.src(srcPaths)
-    .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
-});
-
-gulp.task('vendorimages-dist', function() {
-  var srcPaths = [];
-  for (var i = 0, len = conf.images.vendor_images.length; i < len; i++) {
-    srcPaths.push(path.join(conf.paths.base, conf.images.vendor_images[i]));
-  }
-
-  return gulp.src(srcPaths)
-    .pipe(gulp.dest(path.join(conf.paths.dist, '/img/')));
-});
-
 // Only applies for google analytics
 gulp.task('ga', function () {
   return gulp.src(conf.paths.src + '/assets/scripts/ga.js')
@@ -120,4 +101,4 @@ gulp.task('clean', function () {
   return $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')]);
 });
 
-gulp.task('build', ['html', 'vendorimages-dist', 'vendorfonts-dist', 'fonts', 'ga', 'other']);
+gulp.task('build', ['html', 'fonts', 'ga', 'other']);

@@ -1,37 +1,39 @@
-<div class="landing-page usa-grid">
-  <div class="landing-header usa-width-one-whole">All Notifications</div>
+<div class="landing-page">
+  <div class="landing-header col-md-12">All Notifications</div>
   <div class="usa-grid">
-    <div class="notification-section usa-width-three-fourths">
-      <div class="notification usa-grid" ng-repeat="notification in vm.mockNotifications">
-        <div class="notification-details usa-width-five-sixths usa-grid">
-          <span class="type usa-width-one-whole"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp{{notification.type}}</span>
-          <span class="by usa-width-one-whole">{{notification.by}}</span>
-          <span class="message usa-width-one-whole">{{notification.message}}</span>
+    <div class="notification-section col-md-9">
+      <div class="notification" ng-repeat="notification in vm.mockNotifications">
+        <div class="notification-details col-md-9 usa-grid">
+          <span class="type col-md-12"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp{{notification.type}}</span>
+          <span class="by col-md-12">{{notification.by}}</span>
+          <span class="message col-md-12">{{notification.message}}</span>
         </div>
-        <div class="notification-actions usa-width-one-sixth">
+        <div class="notification-actions col-md-3">
           <button type="button" name="button">Test</button>
           <button type="button" class="usa-button-outline" name="button">View</button>
           <button type="button" class="usa-button-outline" name="button">Details</button>
         </div>
       </div>
     </div>
-    <div class="user-stats usa-width-one-fourth">
-      <div class="stats-title">Your Recognitions</div>
-      <div class="stats-donut">
-        Donut Here
-      </div>
-      <div class="stats-metrics">
-        <div class="metric">
-          <div class="number total">14</div>
-          <div class="label">Test</div>
+    <div class="col-md-3">
+      <div class="user-stats">
+        <div class="stats-title">Your Recognitions</div>
+        <div class="stats-donut">
+          Donut Here
         </div>
-        <div class="metric">
-          <div class="number given">5</div>
-          <div class="label">Test</div>
-        </div>
-        <div class="metric">
-          <div class="number received">9</div>
-          <div class="label">Test</div>
+        <div class="stats-metrics">
+          <div class="metric">
+            <div class="number total">14</div>
+            <div class="label">Test</div>
+          </div>
+          <div class="metric">
+            <div class="number given">5</div>
+            <div class="label">Test</div>
+          </div>
+          <div class="metric">
+            <div class="number received">9</div>
+            <div class="label">Test</div>
+          </div>
         </div>
       </div>
     </div>

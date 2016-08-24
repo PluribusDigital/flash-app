@@ -19,24 +19,6 @@ exports.paths = {
   e2e: 'e2e'
 };
 
-exports.images = {
-  vendor_images: [
-    '/node_modules/uswds/dist/img/*'
-  ]
-};
-
-exports.fonts = {
-  vendor_fonts: [
-    '/node_modules/uswds/dist/fonts/*'
-  ]
-};
-
-exports.styles = {
-  vendor_styles: [
-    '/node_modules/uswds/dist/css/uswds.min.css'
-  ]
-};
-
 exports.scripts = {
   eslint: {
     globals: ['_', '$', 'jQuery']

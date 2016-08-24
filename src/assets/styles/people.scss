@@ -12,7 +12,6 @@
     margin-bottom: 10px;
     .people-title {
       float: left;
-      padding-top: 10px;
       width: 30%;
       font-size: 1.5rem;
       font-weight: bold;
@@ -30,7 +29,7 @@
         span {
           width: 25%;
           float: left;
-          padding: 12px 5px 0 0;
+          padding: 0 5px 0 0;
           text-align: right;
         }
         select {
@@ -44,7 +43,7 @@
         margin-left: 6%;
         i {
           font-size: 24px;
-          padding: 12px;
+          padding: 0 12px 0 0;
         }
         i:hover {
           color: #0071bc;
@@ -54,22 +53,26 @@
   }
   .people-grid {
     margin-left: -3%;
+    margin-right: 3%;
+    padding: 6px;
     .tile {
-      margin: 6px;
+      width: 310px;
+      min-width: 310px;
+      max-width: 310px;
       border: 1px solid #d8d8d8;
       border-radius: 3px;
       height: 160px;
-      padding: 20px;
+      padding-top: 20px;
+      display: inline-block;
       .user-img {
-        width: 50%;
-        margin: 0px;
-        padding: 0px;
+        float: left;
+        width: 160px;
         span {
           min-width: 110px;
           margin: 0px;
           padding: 0px;
           img {
-            margin: 0px;
+            margin-left: 20px;
             padding: 0px;
             border-radius: 60px;
             width: 110px;
@@ -82,7 +85,7 @@
           bottom: 18px;
           display: inline-block;
           width: 60%;
-          margin-left: 13%;
+          margin-left: 27px;
           color: #ffffff;
           font-weight: bold;
           .given {
@@ -104,9 +107,11 @@
         }
       }
       .user-details {
+        width: 140px;
+        float: left;
         .name {
           color: #0071bc;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: bold;
           overflow: hidden;
           white-space: nowrap;
@@ -120,7 +125,7 @@
         }
         button {
           margin-top: 20px;
-          font-size: 14px;
+          font-size: 12px;
         }
       }
     }
