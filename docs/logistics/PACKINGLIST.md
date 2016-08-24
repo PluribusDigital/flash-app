@@ -26,4 +26,5 @@
 1. Laptop Power Cord
 1. Headphones
 1. Personal Snacks
+2. Downloaded music (no Spotify over wifi)
 
