@@ -1,8 +1,9 @@
 # Key Decisions List
 
-### Architectural
-1. 
-2. 
+| Architectural | Decision | Rationale |
+| ===== | ===== | ===== |
+| 1. |  |  |
+| 2. |  |  | 
 
 ### CI/CD
 1. 
