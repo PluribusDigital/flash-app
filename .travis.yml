@@ -25,8 +25,6 @@ after_success:
 - gulp build
 deploy:
   provider: s3
-  access_key_id: $DEPLOY_AWS_ACCESS_KEY_ID_DEV
-  secret_access_key: $DEPLOY_AWS_ACCESS_KEY_DEV
   bucket: develop.flash-app.stsilabs
   skip_cleanup: true
   local_dir: dist
