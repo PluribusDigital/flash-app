@@ -20,8 +20,9 @@ From wikipedia: "a product with just enough features to gather validated learnin
 * Bells and whistles
 
 ## Key Criteria
-As a general rule, don't waste time on something unless...
+As a general rule, don't waste time on something unless it...
 
-* Will this help us answer a BIG QUESTION?
-* Is there a REASONABLE WORKAROUND?
-* Is there a SIMPLER way to accomplish this?
+* ... directly contributes to the BIG GOAL
+* ... help us answer a BIG QUESTION
+* ... has no REASONABLE WORKAROUND
+* ... has no SIMPLER way to accomplish the same feature
