@@ -17,6 +17,9 @@
 1. Pocket Projector (including power cord, HDMI cable)
 1. Mac VGA adapter
 1. Time Timers (2) --> Fresh Batteries
+2. Stickers (to mark post-it Task assignments)
+3. Flag (to wave for blocks)
+4. Highlighters
 
 ## Individual
 
