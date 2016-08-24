@@ -9,34 +9,25 @@ _In order for individuals to successfully collaborate as a team, it is vital to 
 3.	Work must be “approved” before we start on it.
   * Make sure we agreed to the acceptance criteria with the PO before moving forward with the work.
   * Working on unapproved items could cause potential rework, scope creep, and client and team dissatisfaction. 
-4.	For scrum come prepared to talk about issues, blocks, dependencies, and questions.
-  * Do not status in the scrum. The task board tells us what you have accomplished and plan to accomplish – you don’t have to.
+4.	For scrum come prepared to talk about what you did, what you plan to do, issues, blocks, dependencies, and questions.
 5.	Respect each other’s time: Be on time, start on time, end on time, and have an agenda.
 6.	We will be held accountable to our commitments. 
   * We work as a team to make a commitment and we work as a team to deliver on it. 
 7.	Prioritize and respect feedback.
   * We will all give feedback, receive feedback, and act on the feedback together. 
-8.	Listen to what others are saying and strive to understand each other’s perspective. 
-  * Do not [jump to conclusions]() – ask questions. 
-  * Debate the merit of the idea, not the person.
-9.	Respect the “do not disturb” signal. 
+8.	Respect the “do not disturb” signal. 
   * If headphones are in, the person is focused and should not be interrupted. 
   * If headphones are out, you can engage.
-10.	Keep it simple. 
+9.	Keep it simple. 
   * Keep an eye and focus on the MVP.
   * Remember, business value and feasibility are top priority.
-11.	Help others and ask for help from others.
+10.	Help others and ask for help from others.
   * Don’t struggle for more than 15 minutes without asking for help. 
 11. Follow README.md for each repo for contributing, style, etc.
 12. A pull request should usually equate to completion of a user story/card.
-12.	Reviews and Retrospectives (R&Rs) are critical to our process. Everyone participates in them.
+13.	Planning Sessions and Reviews and Retrospectives (R&Rs) are critical to our process. Everyone participates in them.
   * Reviews: 
     - Review the work completed and secure the agreement of “Done.”
-    - Capture feedback.
     - Discuss the product.
-    - Tone: Happy, energetic, upbeat.
   * Retrospectives:
     - Review the process and identify failures, mistakes, blocks, obstacles.
-    - Discuss the process and actions.
-    - Don’t play the blame game, get personal, or complain without offering solutions.
-    - Tone: Honest, reflective, pro-active.
