@@ -4,6 +4,7 @@
 ## Product Backlog (Stories)
 
 The story card (see template below) includes:
+* ID: Matches ID from user provided backlog
 * Title: short name
 * Story sentence: in the form of "As a XXXX I want to YYYYY"
 * Acceptance criteria summary bullets
