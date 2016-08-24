@@ -22,7 +22,7 @@
 ## Individual
 
 1. Government ID: (Drivers License, Passport, HSPD-12 type govt ID)
-1. Laptop 
+1. Laptop (fully charged!)
 1. Laptop Power Cord
 1. Headphones
 1. Personal Snacks
