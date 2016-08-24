@@ -4,7 +4,7 @@
 
 ## Group 
 
-1. Wifi Pucks (2)
+1. Wifi Pucks (2) (charged w/ power cord/adapter)
 1. Power Strips (2-3)
 1. Extension Cords (2)
 1. Masking Tape
@@ -17,7 +17,6 @@
 1. Pocket Projector (including power cord, HDMI cable)
 1. Mac VGA adapter
 1. Time Timers (2) --> Fresh Batteries
-
 
 ## Individual
 
