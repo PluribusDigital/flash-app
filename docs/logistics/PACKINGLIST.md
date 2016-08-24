@@ -10,6 +10,7 @@
 1. Masking Tape
 1. Large Post-it pack
 1. Small Post-it pack
+2. ~100 sheets 8.5x11 paper
 1. Dry Erase Markers (12)
 1. Pens - Papermate (6)
 1. Whiteboard wall sheets
