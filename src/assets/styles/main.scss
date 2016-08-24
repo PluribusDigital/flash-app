@@ -13,7 +13,7 @@
     color: #0071bc;
   }
   .user-stats {
-    margin: 0;
+    width: 90%;
     height: 300px;
     background-color: #f1f1f1;
     padding: 10px;
@@ -65,10 +65,9 @@
     }
   }
   .notification-section {
-    margin-left: -5%;
     .notification {
-      margin-bottom: 25px;
       .notification-details {
+        margin-bottom: 20px;
         .type {
           font-size: 1.15rem;
           font-weight: bold;
@@ -84,9 +83,12 @@
         }
       }
       .notification-actions {
+        margin-top: 10px;
+        margin-bottom: 30px;
         button {
           font-size: 14px;
           width: 100%;
+          margin-bottom: 3px;
         }
       }
     }

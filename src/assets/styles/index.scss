@@ -5,8 +5,6 @@
 // bower:scss
 // endbower
 
-@import 'bourbon';
-
 /*----------------------------------------
 [Table of Contents]
 
@@ -58,8 +56,9 @@ body {
 ----------------------------------------*/
 
 header.app-header {
+  z-index: 10;
   color: white;
-  @include linear-gradient(to right, #376996, #112e51);
+  background: linear-gradient(to right, #376996, #112e51);
   position: fixed;
   width: 100%;
   top: 0;
