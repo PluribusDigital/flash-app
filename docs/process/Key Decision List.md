@@ -1,21 +1,21 @@
 # Key Decisions List
 
-## Architectural
+### Architectural
 1. 
 2. 
 
-## CI/CD
+### CI/CD
 1. 
 2. 
 
-## Tech Stack
+### Tech Stack
 1. 
 2. 
 
-## Tools
+### Tools
 1. 
 2. 
 
-## Requirements
+### Requirements
 1. 
 2. 
