@@ -25,6 +25,10 @@
         templateUrl: 'app/people/people.html',
         controller: 'PeopleController',
         controllerAs: 'vm'
+      })
+      .state('api-docs', {
+        url: '/api-docs',
+        templateUrl: 'app/api-docs/api-docs.html'
       });
 
     $urlRouterProvider.otherwise('/');
