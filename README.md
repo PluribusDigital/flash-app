@@ -1,4 +1,5 @@
 # flash-app
+[![Build Status](https://travis-ci.com/STSILABS/flash-app.svg?token=s8fjYespqEg1vvrpYmqn&branch=develop)](https://travis-ci.com/STSILABS/flash-app)
 
 ## Getting Started
 
