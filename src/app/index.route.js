@@ -28,7 +28,9 @@
       })
       .state('api-docs', {
         url: '/api-docs',
-        templateUrl: 'app/api-docs/api-docs.html'
+        templateUrl: 'app/api-docs/api-docs.html',
+        controller: 'ApiDocsController',
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/');
