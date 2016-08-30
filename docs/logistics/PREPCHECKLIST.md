@@ -12,7 +12,8 @@
 ## 30-min day-of prep
 
 1. Arrange seating
-1. Prep boards
+1. Prep boards (swimlanes, titles, WIP limit)
 1. Power & projectors lined up
 1. Setup easel
 1. Position Pomodoro Timers
+2. Put masking tape strips (for later hanging of paper drawings, etc.)
