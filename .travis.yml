@@ -6,7 +6,6 @@ branches:
   only:
   - master
   - develop
-  - generate-deployable-config
 cache:
   directories:
   - node_modules
