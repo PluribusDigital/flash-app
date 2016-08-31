@@ -32,19 +32,7 @@ deploy:
   skip_cleanup: true
   local_dir: dist
   on:
-    branch: develop
-- provider: s3
-  bucket: stage.flash-app.stsilabs
-  skip_cleanup: true
-  local_dir: dist
-  on:
-    branch: stage
-- provider: s3
-  bucket: prod.flash-app.stsilabs
-  skip_cleanup: true
-  local_dir: dist
-  on:
-    branch: master    
+    branch: develop   
 notifications:
   slack:
     secure:
