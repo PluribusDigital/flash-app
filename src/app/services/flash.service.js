@@ -31,38 +31,48 @@
         return flashParams;
       };
 
-      var users = {
+      var doHttpRequest = function(version, method, path, params, cache) {
+        return $http(requestParams({
+            method: method,
+            cache: cache,
+            url: config.baseUrl + 'v' + version + '/' + path,
+            params: _.extend(params, {
+              api_key: client.apiKey
+            })
+        }));
+      };
 
-        getUser: function (username) {
+      var Resource = function(resourceType) {
+        var version = '1';
 
-          return $http(requestParams({
-              method: 'GET',
-              cache: true,
-              url: client.routes.users + '/' + username,
-              params: {
-                api_key: client.apiKey
-              }
-          }));
+        this.version = function(newVersion) {
+          version = newVersion;
+        };
 
-        },
+        this.list = function() {
+          return doHttpRequest(version, 'GET', resourceType, {}, true);
+        };
 
-        getAllUsers: function () {
+        this.get = function(id) {
+        };
 
-          return $http(requestParams({
-              method: 'GET',
-              cache: true,
-              url: client.routes.users,
-              params: {
-                api_key: client.apiKey
-              }
-          }));
+        this.create = function(data) {
+        };
 
-        }
+        this.update = function(id, data) {
+        };
+
+        this.delete = function(id) {
+        };
+
+      };
+
+      var getResourceHandler = function(resourceType) {
+        return new Resource(resourceType)
       };
 
       return {
-        client: client,
-        users: users
+        resource: getResourceHandler
       };
 
     }
