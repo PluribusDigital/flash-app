@@ -24,7 +24,7 @@ after_success:
 - cp coverage/*/lcov.info .
 - codeclimate-test-reporter < lcov.info
 # generate deployable configuration
-- sed -e "s/<API_KEY>/$DEVELOP_API_KEY/" -e "s/<BASE_URL>/$DEVELOP_FLASH_API_ENDPOINT/" < src/app/app.deploy.config.js > src/app/app.config.js
+- gulp travis-pre-build
 - cat src/app/app.config.js
 - gulp build
 deploy:
