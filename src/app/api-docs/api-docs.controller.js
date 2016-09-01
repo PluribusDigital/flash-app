@@ -27,7 +27,6 @@
 
     })
     .run(function(swaggerModules, apiDocsSwaggerModule){
-        swaggerModules.add(swaggerModules.BEFORE_LOAD, apiDocsSwaggerModule);
         swaggerModules.add(swaggerModules.BEFORE_EXPLORER_LOAD, apiDocsSwaggerModule);
     });
 
@@ -35,7 +34,7 @@
   function ApiDocsController(config) {
     var vm = this;
 
-    vm.swaggerUrl = config.baseUrl + "v1/?api_key=" + config.apiKey;
+    vm.swaggerUrl = config.baseUrl + "v1/";
 
   }
 })();
