@@ -16,7 +16,7 @@
     }));
 
     it('should generate swagger json URL from config', function() {
-      expect(vm.swaggerUrl).toEqual(mockConfig.baseUrl + "v1/?api_key=" + mockConfig.apiKey);
+      expect(vm.swaggerUrl).toEqual(mockConfig.baseUrl + "v1/");
     });
   });
 
