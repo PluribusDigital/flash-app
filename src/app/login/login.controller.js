@@ -6,14 +6,14 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($log, $rootScope, $state, userService) {
+  function LoginController($log, $rootScope, $state, flashService) {
     var vm = this;
     vm.setCredentials = setCredentials;
     vm.login = login;
 
     function login(username, password){
       vm.setCredentials(username, password);
-      userService.users.loginUser().then(function(res){
+      flashService.resource('users').get(username).then(function(res){
         $log.info(angular.toJson(res));
         $rootScope.loggedInUser = res;
         $state.go('home');

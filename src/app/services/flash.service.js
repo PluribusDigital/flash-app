@@ -1,3 +1,4 @@
+/* global _ */
 (function() {
   'use strict';
 
@@ -6,20 +7,6 @@
     .factory('flashService', flashService);
 
     function flashService($log, $http, $q, $rootScope, config, $base64) {
-
-      var client = {
-        baseUrl: config.baseUrl,
-        apiUrl: config.baseUrl + 'v1/',
-        apiKey: config.apiKey,
-        client_id: config.clientID,
-        client_secret: config.clientSecret,
-        random_code: $rootScope.random_code
-      };
-
-      client.routes = {
-        authenticate: client.baseUrl + 'oauth/',
-        users: client.apiUrl + 'users'
-      };
 
       var requestParams = function(params) {
         var flashParams = params;
@@ -31,38 +18,53 @@
         return flashParams;
       };
 
-      var users = {
+      var doHttpRequest = function(version, method, path, params, data, cache) {
+        return $http(requestParams({
+            method: method,
+            cache: cache,
+            url: config.baseUrl + 'v' + version + '/' + path,
+            params: _.extend(params, {
+              api_key: config.apiKey
+            }),
+            data: data
+        }));
+      };
 
-        getUser: function (username) {
+      var Resource = function(resourceType) {
+        var version = '1';
 
-          return $http(requestParams({
-              method: 'GET',
-              cache: true,
-              url: client.routes.users + '/' + username,
-              params: {
-                api_key: client.apiKey
-              }
-          }));
+        this.version = function(newVersion) {
+          version = newVersion;
+        };
 
-        },
+        this.list = function() {
+          return doHttpRequest(version, 'GET', resourceType, {}, undefined, true);
+        };
 
-        getAllUsers: function () {
+        this.get = function(id) {
+          return doHttpRequest(version, 'GET', resourceType + '/' + id, {}, undefined, true);
+        };
 
-          return $http(requestParams({
-              method: 'GET',
-              cache: true,
-              url: client.routes.users,
-              params: {
-                api_key: client.apiKey
-              }
-          }));
+        this.create = function(data) {
+          return doHttpRequest(version, 'POST', resourceType, {}, data, true);
+        };
 
-        }
+        this.update = function(id, data) {
+          return doHttpRequest(version, 'POST', resourceType + '/' + id, {}, data, true);
+        };
+
+        this.delete = function(id) {
+          return doHttpRequest(version, 'DELETE', resourceType + '/' + id, {}, undefined, true);
+        };
+
+      };
+
+      var getResourceHandler = function(resourceType) {
+        return new Resource(resourceType)
       };
 
       return {
-        client: client,
-        users: users
+        resource: getResourceHandler
       };
 
     }
