@@ -17,14 +17,15 @@
         return flashParams;
       };
 
-      var doHttpRequest = function(version, method, path, params, cache) {
+      var doHttpRequest = function(version, method, path, params, data, cache) {
         return $http(requestParams({
             method: method,
             cache: cache,
             url: config.baseUrl + 'v' + version + '/' + path,
             params: _.extend(params, {
               api_key: config.apiKey
-            })
+            }),
+            data: data
         }));
       };
 
@@ -36,19 +37,23 @@
         };
 
         this.list = function() {
-          return doHttpRequest(version, 'GET', resourceType, {}, true);
+          return doHttpRequest(version, 'GET', resourceType, {}, undefined, true);
         };
 
         this.get = function(id) {
+          return doHttpRequest(version, 'GET', resourceType + '/' + id, {}, undefined, true);
         };
 
         this.create = function(data) {
+          return doHttpRequest(version, 'POST', resourceType, {}, data, true);
         };
 
         this.update = function(id, data) {
+          return doHttpRequest(version, 'POST', resourceType + '/' + id, {}, data, true);
         };
 
         this.delete = function(id) {
+          return doHttpRequest(version, 'DELETE', resourceType + '/' + id, {}, undefined, true);
         };
 
       };
