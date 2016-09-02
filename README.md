@@ -14,6 +14,7 @@
 - Edit the app.config.js file with necessary variables (URL Base Route and API Key)
 
 ```
+- npm install -g bower-npm-resolver
 - npm install
 - bower install
 - gulp serve
@@ -23,4 +24,7 @@ Note: You may have to run `sudo npm install --global gulp-cli`
 
 ## Running Tests
 
-TODO
+Use the following command to run the unit tests for the application:
+```
+gulp test
+```
