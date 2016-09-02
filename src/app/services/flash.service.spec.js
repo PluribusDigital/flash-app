@@ -8,6 +8,10 @@
       baseUrl: 'http://www.somehost.com/path/to/api/',
       apiKey: 'test12345'
     };
+    var gwashingtonUser = {
+      meta: {},
+      data: {id: 12345, username: 'gwashington'}
+    };
 
     beforeEach(module('flashApp'));
     beforeEach(module(function($provide) {
@@ -49,10 +53,7 @@
     });
 
     it('should retrieve a single resource item', function() {
-      var user = {
-        meta: {},
-        data: {id: 12345, username: 'gwashington'}
-      },
+      var user = gwashingtonUser,
       actualResponse;
 
       $httpBackend
@@ -71,10 +72,7 @@
     });
 
     it('should create a resource item', function() {
-      var user = {
-        meta: {},
-        data: {id: 12345, username: 'gwashington'}
-      },
+      var user = gwashingtonUser,
       createData = {
         username: 'gwashington'
       },
