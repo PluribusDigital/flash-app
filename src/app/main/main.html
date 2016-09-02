@@ -19,7 +19,9 @@
       <div class="user-stats">
         <div class="stats-title">Your Recognitions</div>
         <div class="stats-donut">
-          Donut Here
+          <canvas id="stats-donut" class="chart chart-doughnut"
+            chart-data="vm.statsData" chart-labels="vm.statsLabels">
+          </canvas>
         </div>
         <div class="stats-metrics">
           <div class="metric">
