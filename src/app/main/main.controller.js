@@ -8,6 +8,8 @@
   /** @ngInject */
   function MainController() {
     var vm = this;
+    vm.statsLabels = ["Given", "Received"];
+    vm.statsData = [8, 10];
     vm.userStats = { total: 18, given:8, received:10 };
     vm.mockNotifications = [
       {

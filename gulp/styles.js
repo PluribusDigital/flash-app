@@ -22,7 +22,8 @@ gulp.task('styles', function() {
 
 var buildStyles = function() {
   var sassOptions = {
-    style: 'expanded'
+    style: 'expanded',
+    includePaths: require("bourbon").includePaths
   };
 
   var injectPaths = [
