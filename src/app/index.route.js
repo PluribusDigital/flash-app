@@ -35,8 +35,6 @@
       .state('component-library', {
         url: '/developers/component-library',
         templateUrl: 'app/developers/component-library/component-library.html',
-        controller: 'ComponentLibraryController',
-        controllerAs: 'vm'
       })
       .state('component-library.forms', {
         url: '/forms',
