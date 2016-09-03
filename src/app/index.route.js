@@ -31,6 +31,16 @@
         templateUrl: 'app/api-docs/api-docs.html',
         controller: 'ApiDocsController',
         controllerAs: 'vm'
+      })
+      .state('component-library', {
+        url: '/developers/component-library',
+        templateUrl: 'app/developers/component-library/component-library.html'
+      })
+      .state('component-library.forms', {
+        url: '/forms',
+        templateUrl: 'app/developers/component-library/forms.html',
+        controller: 'ComponentLibraryFormsController',
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/');
