@@ -34,7 +34,7 @@
       })
       .state('component-library', {
         url: '/developers/component-library',
-        templateUrl: 'app/developers/component-library/component-library.html',
+        templateUrl: 'app/developers/component-library/component-library.html'
       })
       .state('component-library.forms', {
         url: '/forms',
