@@ -2,7 +2,7 @@
   'use strict';
 
   describe('Autocomplete Directive', function(){
-    var $scope, $compile, element;
+    var $scope, $compile;
 
     beforeEach(module('flashApp'));
     beforeEach(inject(function ($rootScope, _$compile_) {
@@ -15,7 +15,7 @@
         source: function() {}
       };
 
-      element = $compile(
+      $compile(
         '<autocomplete model="autocompleteModel" options="autocompleteOptions" datasets="autocompleteDataset">' +
         '<script type="text/template" data-template="suggestion"><strong>{{name}}</strong> - {{age}}</script>' +
         '<script type="text/template" data-template="empty">No results found!</script>' +

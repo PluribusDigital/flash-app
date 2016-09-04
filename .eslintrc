@@ -8,6 +8,10 @@
   "globals": {
     "angular": true,
     "module": true,
-    "inject": true
+    "inject": true,
+    "$": true,
+    "jQuery": true,
+    "Handlebars": true,
+    "_": true
   }
 }
