@@ -16,7 +16,7 @@
     beforeEach(module('flashApp.core', function(AngularyticsProvider) {
       AngularyticsProvider.setEventHandlers(['Console']);
     }));
-    beforeEach(inject(function(_$controller_, _flashService_, _$rootScope_, _$state_, _$q_) {
+    beforeEach(inject(function($controller, _flashService_, _$rootScope_, _$state_, _$q_) {
       $q = _$q_;
       $rootScope = _$rootScope_;
       $scope = $rootScope.$new();
@@ -24,7 +24,7 @@
       $state = _$state_;
       spyOn(flashService, 'resource').and.returnValue(userResource);
 
-      vm = _$controller_('LoginController', {
+      vm = $controller('LoginController', {
         flashService: flashService,
         '$state': $state
       });
