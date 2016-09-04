@@ -1,0 +1,11 @@
+<autocomplete model="vm.user" options="vm.autocompleteOptions" datasets="vm.userAutocompleteDataset">
+  <script type="text/template" data-template="suggestion">
+    <div>
+      <strong>{{name}}</strong><br>
+      {{position}}<br>
+      Hired: {{hireDate}}
+    </div>
+  </script>
+</autocomplete>
+
+<textarea readonly="readonly">{{vm.user}}</textarea>

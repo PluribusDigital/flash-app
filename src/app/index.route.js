@@ -41,6 +41,12 @@
         templateUrl: 'app/developers/component-library/forms.html',
         controller: 'ComponentLibraryFormsController',
         controllerAs: 'vm'
+      })
+      .state('component-library.autocomplete', {
+        url: '/autocomplete',
+        templateUrl: 'app/developers/component-library/autocomplete.html',
+        controller: 'ComponentLibraryAutocompleteController',
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/');

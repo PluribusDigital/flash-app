@@ -6,14 +6,14 @@
     .controller('PeopleController', PeopleController);
 
   /** @ngInject */
-  function PeopleController(userService) {
+  function PeopleController(flashService) {
     var vm = this;
     vm.getAllUsers = getAllUsers;
 
     vm.getAllUsers();
 
     function getAllUsers(){
-      userService.users.getAllUsers().then(function(res){
+      flashService.resource('users').list().then(function(res){
         vm.peopleList = res;
       });
     }

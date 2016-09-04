@@ -21,7 +21,7 @@ exports.paths = {
 
 exports.scripts = {
   eslint: {
-    globals: ['_', '$', 'jQuery']
+    globals: ['_', '$', 'jQuery', 'Handlebars']
   }
 };
 

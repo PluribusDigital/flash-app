@@ -9,10 +9,10 @@
   function FormsController() {
     var vm = this;
     vm.user = {};
-    vm.userJson = "";
+    vm.submittedUser = null;
 
     vm.submit = function (user) {
-      vm.userJson = angular.toJson(user);
+      vm.submittedUser = _.clone(user);
     };
 
     // note, these field types will need to be
