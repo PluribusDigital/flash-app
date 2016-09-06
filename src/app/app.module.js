@@ -4,6 +4,6 @@
   angular
     .module('flashApp', [
       'flashApp.core', 'base64', 'swaggerUi', 'chart.js', 'formly',
-      'formlyBootstrap', 'siyfion.sfTypeahead']);
+      'formlyBootstrap', 'ui.bootstrap']);
 
 })();

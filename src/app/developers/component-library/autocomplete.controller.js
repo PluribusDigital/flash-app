@@ -25,25 +25,10 @@
         position: "Paralegal",
         hireDate: "3/30/2007"
       }
-    ]
+    ];
 
-    vm.user = {};
-    vm.autocompleteOptions = {
-      highlight: true
-    };
-    vm.userAutocompleteDataset = {
-      display: 'name',
-      source: function(term, cb) {
-        var user = _.filter(users, function(user) {
-          term = term.toLowerCase();
-
-          return user.name.toLowerCase().indexOf(term) != -1 ||
-            user.position.toLowerCase().indexOf(term) != -1;
-        });
-
-        cb(user);
-      }
-    };
+    vm.user = null;
+    vm.userAutocompleteDataset = users;
   }
 
 })();
