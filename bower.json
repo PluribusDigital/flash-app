@@ -19,7 +19,6 @@
     "lodash": "~4.15.0",
     "angular-base64": "^2.0.5",
     "angular-swagger-ui": "~0.3.2",
-    "bourbon": "~4.2.7",
     "angular-chart.js": "~1.0.2",
     "api-check": "~7.5.5",
     "angular-formly": "~8.3.0",
