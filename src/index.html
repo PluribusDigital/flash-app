@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>flashApp</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -27,11 +27,11 @@
     <div ng-if="vm.state.current.name != 'login'">
       <header class="app-header" role="banner">
         <div class="site-navbar">
-          <div class="col-md-4">
+          <div class="col-xs-6 col-sm-4 col-md-4">
             <a class="menu-toggle" href ng-click="vm.toggleNavMenu()"><i class="fa fa-bars"></i></a>
             <span class="app-name">Name of Application Here</span>
           </div>
-          <div class="col-md-4 logo">
+          <div class="col-xs-6 pull-xs-right col-sm-4 col-md-4 logo">
             <img src="/assets/images/dhs-seal.png">
           </div>
         </div>
