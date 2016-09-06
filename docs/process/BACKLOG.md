@@ -1,20 +1,21 @@
 # Backlog Board
 
-
 ## Product Backlog (Stories)
 
 The story card (see template below) includes:
-* ID: Matches ID from user provided backlog
-* Title: short name
-* Story sentence: in the form of "As a XXXX I want to YYYYY"
-* Acceptance criteria summary bullets
+* Tag: If appropriate, tag as:
+  - BR: Business rule
+  - Data: Data requirement
+  - NFR: Nonfunctional requirement 
+* ID: Matches ID from PO-provided backlog (create IDs if not existing)
+* Title: abbreviated (5-10 words) title, readable from a distance
 * Scores
-  - (B)usiness value: High/Medium/Low 
-  - (U)ser value: High/Medium/Low
-  - (T)echnical feasibility: 
-    * Red: Cannot be built within the challenge timeframe
-    * Yellow: Only this could be built within the challenge timeframe
-    * Green: This and other features can be built within the challenge timeframe
+  - (B)usiness value: [H]igh/[M]edium/[L]ow 
+  - (U)ser need: [H]igh/[M]edium/[L]ow 
+  - (T)echnical feasibility: R/Y/G
+    * [R]ed: Cannot be built within the challenge timeframe
+    * [Y]ellow: Only this could be built within the challenge timeframe
+    * [G]reen: This and other features can be built within the challenge timeframe
 
 ![example card](example_backlog_card.jpg)
 
