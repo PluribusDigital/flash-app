@@ -1,5 +1,5 @@
 
-# Contributing to the Flash API
+# Contributing to the Flash APP
 
 This guideline is designed to organize and make contribution changes run as smoothly and efficiently as possible.
 
