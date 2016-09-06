@@ -39,7 +39,11 @@
       spyOn($state, 'go');
 
       vm.login('gwashington', 'george1');
-      userGetDeferred.resolve(loggedInUser);
+      userGetDeferred.resolve({
+        data: {
+          data: loggedInUser
+        }
+      });
       $scope.$apply();
 
       expect(userResource.get).toHaveBeenCalledWith('gwashington');
