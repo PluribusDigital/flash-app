@@ -14,7 +14,7 @@
 
     function getAllUsers(){
       flashService.resource('users').list().then(function(res){
-        vm.peopleList = res;
+        vm.peopleList = res.data.data;
       });
     }
   }
