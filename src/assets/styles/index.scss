@@ -99,6 +99,18 @@ header.app-header {
   }
 }
 
+nav-menu.ng-hide .app-menu {
+  opacity: 0;
+  left: -100px !important;
+}
+
+nav-menu {
+  transition: all linear 0.25s;
+  position: fixed;
+  left: 0;
+  width: 175px;
+}
+
 .app-content {
   margin-top: 70px;
 }

@@ -14,8 +14,7 @@
     function login(username, password){
       vm.setCredentials(username, password);
       flashService.resource('users').get(username).then(function(res){
-        $log.info(angular.toJson(res));
-        $rootScope.loggedInUser = res;
+        $rootScope.loggedInUser = res.data.data;
         $state.go('home');
       });
     }

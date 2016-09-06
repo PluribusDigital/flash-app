@@ -9,13 +9,10 @@
     var userResource = {
       list: function() {}
     };
-    var users = {
-      meta: {},
-      data: [
-        {'username': 'gwashington'},
-        {'username': 'jadams'}
-      ]
-    };
+    var users = [
+      {'username': 'gwashington'},
+      {'username': 'jadams'}
+    ];
     var userListDefer;
 
     beforeEach(module('flashApp'));
@@ -36,7 +33,11 @@
     }));
 
     it('should retrieve all users', function() {
-      userListDefer.resolve(users);
+      userListDefer.resolve({
+        data: {
+          data: users
+        }
+      });
       $scope.$apply();
 
       expect(flashService.resource).toHaveBeenCalledWith('users');

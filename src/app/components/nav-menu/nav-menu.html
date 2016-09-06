@@ -1,10 +1,10 @@
 <div class="app-menu">
   <div class="menu-header"><a class="close-button" href ng-click="vm.hideMenu()"><i class="fa fa-bars"></i></a> Menu</div>
-  <ul class="usa-sidenav-list">
-    <li><a href="#/home" ng-class="{'usa-current': vm.isInSection('home')}"><i class="fa fa-fw"></i> Home</a></li>
-    <li><a href ng-class="{'usa-current': vm.isInSection('kudos')}"><i class="fa fa-trophy"></i> Recommendations</a></li>
-    <li><a href="#/people" ng-class="{'usa-current': vm.isInSection('people')}"><i class="fa fa-users"></i> People</a></li>
-  </ul>
+  <div>
+    <div><a href="#/home" ng-class="{'nav-current': vm.isInSection('home')}"><i class="fa fa-home"></i> Home</a></div>
+    <div><a href ng-class="{'nav-current': vm.isInSection('kudos')}"><i class="fa fa-trophy"></i> Recommendations</a></div>
+    <div><a href="#/people" ng-class="{'nav-current': vm.isInSection('people')}"><i class="fa fa-users"></i> People</a></div>
+  </div>
 
   <ul class="profile-actions">
     <li class="my-profile">
