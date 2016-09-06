@@ -37,7 +37,7 @@ gulp test
 
 Prerequisites:
  * Ruby 2.2.2
- * bundler (`gem install bundler`)
+ * bundler (`> gem install bundler`)
  
 Setup:
  * `> bundle install` to install cucumber & related tools
