@@ -1,7 +1,9 @@
 {
   "name": "flashApp",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "bower-npm-resolver": "^0.5.1"
+  },
   "scripts": {
     "test": "gulp test"
   },
@@ -48,7 +50,8 @@
     "phantomjs": "~1.9.18",
     "uglify-save-license": "~0.4.1",
     "wiredep": "~2.2.2",
-    "wrench": "~1.5.8"
+    "wrench": "~1.5.8",
+    "bourbon": "~4.2.7"
   },
   "engines": {
     "node": ">=0.10.0"
