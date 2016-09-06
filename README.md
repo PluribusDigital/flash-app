@@ -36,14 +36,16 @@ gulp test
 ### Cucumber Acceptance Tests
 
 Prerequisites:
- * bundler (`gem install bundler`)
  * Ruby 2.2.2
-
+ * bundler (`gem install bundler`)
+ 
 Setup:
-`bundle install`
+ * `> bundle install` to install cucumber & related tools
+ * In `/features/support/env.rb` you can change the Capybara.app_host to hit different environments/urls
 
 Running specs:
-`cucumber`
+
+`> cucumber`
 
 Tags: 
 In the `/features/*.feature` files, you can tag a scenario (e.g. demo or debugging) with 
