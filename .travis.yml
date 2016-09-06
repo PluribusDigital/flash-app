@@ -6,7 +6,6 @@ branches:
   only:
   - master
   - develop
-  - stage
 cache:
   directories:
   - node_modules
@@ -29,14 +28,6 @@ after_success:
 - cat src/app/app.config.js
 - gulp build
 deploy:
-- provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: stage.flash-app.stsilabs
-  skip_cleanup: true
-  local_dir: dist
-  on:
-    branch: stage
 - provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
