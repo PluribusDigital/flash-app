@@ -28,3 +28,22 @@ Use the following command to run the unit tests for the application:
 ```
 gulp test
 ```
+
+### Cucumber Acceptance Tests
+
+Prerequisites:
+ * bundler (`gem install bundler`)
+ * Ruby 2.2.2
+
+Setup:
+`bundle install`
+
+Running specs:
+`cucumber`
+
+Tags: 
+In the `/features/*.feature` files, you can tag a scenario (e.g. demo or debugging) with 
+ * `@slow` to playback in slomo 
+ * `@pause` to pause and wait for command line input
+
+
