@@ -71,8 +71,8 @@ header.app-header {
   }
 
   .menu-toggle {
-    margin-left: 3rem;
     margin-right: 1rem;
+    display: none;
   }
 
   .app-name {
@@ -80,7 +80,11 @@ header.app-header {
     line-height: $app-header-height;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $xs-breakpoint) {
+    .menu-toggle {
+      display: inline;
+    }
+
     .logo {
       text-align: right !important;
     }
@@ -100,20 +104,14 @@ header.app-header {
   }
 }
 
-nav-menu.ng-hide .app-menu {
-  opacity: 0;
-  left: -100px !important;
-}
-
-nav-menu {
-  transition: all linear 0.25s;
-  position: fixed;
-  left: 0;
-  width: 175px;
-}
-
 .app-content {
   margin-top: 70px;
+}
+
+@media screen and (min-width: $xs-breakpoint) {
+  .app-content {
+    margin-left: calc(#{$app-menu-width} + 2em);
+  }
 }
 
 /**

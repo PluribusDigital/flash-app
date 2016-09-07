@@ -1,8 +1,22 @@
 @import '../variables.scss';
 
-$app-menu-width: 175px;
+nav-menu {
+  transition: all linear 0.25s;
+  width: 175px;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $xs-breakpoint) {
+  nav-menu.nav-hide .app-menu {
+    width: 0;
+    opacity: 0;
+    left: -100px !important;
+  }
+
+  .nav-hide .app-menu {
+    opacity: 0;
+    left: -175px;
+  }
+
   .app-menu {
     top: 0;
     width: 50%;
@@ -13,7 +27,7 @@ $app-menu-width: 175px;
       padding: 0;
       border-bottom: none !important;
       .close-button {
-        margin-left: 3rem;
+        margin-left: 1.5rem;
         margin-right: 1rem;
         display: inline;
       }
@@ -21,7 +35,7 @@ $app-menu-width: 175px;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $xs-breakpoint) {
   .app-menu {
     top: 50px;
     width: $app-menu-width;
@@ -34,11 +48,6 @@ $app-menu-width: 175px;
       }
     }
   }
-}
-
-.app-menu.ng-hide {
-  opacity: 0;
-  left: -175px;
 }
 
 .app-menu {
@@ -79,7 +88,7 @@ $app-menu-width: 175px;
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: $xs-breakpoint) {
     .usa-sidenav-list {
       li {
         border-bottom: none;
@@ -113,7 +122,7 @@ $app-menu-width: 175px;
     }
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $xs-breakpoint) {
     .usa-sidenav-list {
       .fa {
         display: none;
@@ -157,7 +166,7 @@ $app-menu-width: 175px;
       color: black;
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: $xs-breakpoint) {
       .profile-name, .profile-image {
         display: none;
       }
@@ -175,7 +184,7 @@ $app-menu-width: 175px;
       }
     }
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $xs-breakpoint) {
       .my-profile {
         .fa, .label {
           display: none;
