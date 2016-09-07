@@ -1,0 +1,72 @@
+.user-settings {
+  .header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0071bc;
+    i {
+      margin-right: 10px;
+    }
+  }
+  .setting-section {
+    margin-top: 20px;
+    .section-header {
+      font-size: 1.9rem;
+      font-weight: bold;
+    }
+    .section-content {
+      margin: 0 0 20px 0;
+      font-family: 'Source Sans Pro';
+      .setting-input {
+        margin-top: 15px;
+        input[type="text"] {
+          width: 75%;
+          border-radius: 0px;
+        }
+        button {
+          width: 140px;
+        }
+      }
+      .setting-select-header {
+        margin-top: 10px;
+      }
+      .setting-select {
+        input[type="checkbox"] {
+          width: auto;
+          border: none;
+          box-shadow: none;
+          float: left;
+        }
+        label {
+          padding: 10px 0 0 7px;
+        }
+        button {
+          margin-top: 10px;
+          width: 140px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .user-settings {
+    margin-left: 10px !important;
+    .setting-section {
+      .section-content {
+        .setting-select {
+          input {
+            margin: 0;
+          }
+          button {
+            margin-top: 10px;
+            width: 140px;
+          }
+        }
+        .save-button {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
