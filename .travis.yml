@@ -6,6 +6,8 @@ branches:
   only:
   - master
   - develop
+  - dryrun
+  - dryrun-dev
 cache:
   directories:
   - node_modules
@@ -35,7 +37,7 @@ deploy:
   skip_cleanup: true
   local_dir: dist
   on:
-    branch: develop
+    branch: dryrun-dev
 - provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
@@ -43,7 +45,7 @@ deploy:
   skip_cleanup: true
   local_dir: dist
   on:
-    branch: master
+    branch: dryrun
 notifications:
   slack:
     secure: bULm9+M9xpvGCj3tnjEjMYarN470GkNAGfC8C7f6qKj65mTbtrAetOvXkqeduKFwyD1kC66X7Hd7QnaNrcv2GKpiXGNblphP+uWsMeGl3dbjwg2vYkm6zod/KY3kNZojYa1X5iprPE4v1o58D0lBclPk7XkUHq87pT1HOVZFudgjbPZrskTUvqx00XIUq+d0DSb/7nopkCN/dAJrTBU/InQ9//LDfqCORtAvzpHSZO8wlo2+IbgPDf7dAfKNS7xFdloG6vsAN1Bz6WPXaa90b+qtwyKZOMTZ1aunkJck2itT+ysnzHw+VyfupX0PYnjlyyFdQv5xRNzjOBVHSbEGLwFf5nyjCOW1nedy3TVW4G5/KW7Q4KVAXsQkmhL5VeMcuVDG5Bm3Gj6rG7LlrensoBJU4Eh3rjZnH2G/XXEkbFtNzP+mumoojYw3AM79O5EtC46tvNXxoA2RgzMH+fdUZPCherHSoy481qPZHNYS7GSPL9/OkPb1Mi7oNoXqeS5UZyNb9q6KjG41qo15y1yuwl/8XcKqFdB1cMjG6KpROWgNRCDQMLH9pA55QmMTAEztmeyISrFqjg6xEtE9K9epjEJJmDTiIdhYu86oLRimw0ZJvrv0BKuPHPPURCEiqNQBjqp+4w9lPkE2spa2uBPoVo3XydKaIH0k/xy5bR33JHk=

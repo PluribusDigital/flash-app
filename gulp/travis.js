@@ -17,10 +17,14 @@ gulp.task('travis-deploy-vars', ['travis-rename-config'], function() {
   var deployEnv = 'DEVELOP'
   switch(branchName) {
     case 'master':
+    case 'dryrun':
       deployEnv = 'PROD';
       break;
     case 'stage':
       deployEnv = 'STAGE';
+      break;
+    case 'dryrun-dev':
+      deployEnv - 'DEVELOP';
       break;
     default:
       deployEnv = 'DEVELOP';
