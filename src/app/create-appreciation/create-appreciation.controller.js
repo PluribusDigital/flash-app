@@ -15,7 +15,7 @@
       vm.users = res.data.data;
     });
 
-    vm.toUser = {};
+    vm.toUser = null;
     vm.appreciation = {};
 
     vm.appreciationFields = [
@@ -56,8 +56,13 @@
     vm.submit = function() {
       var appreciation = _.clone(vm.appreciation);
       appreciation.to_user = vm.toUser.id;
+      appreciation.from_user = $rootScope.loggedInUser.id;
 
-      $log.info(appreciation);
+      flashService.resource('appreciations').create(appreciation).then(function(res){
+        $state.go('home');
+      }, function(err) {
+        vm.unsuccessful = err;
+      });      
     };
 
   }

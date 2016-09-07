@@ -5,7 +5,7 @@
     <label for="formly_1_input_give_to_0" class="control-label ">
     Give Appreciation To
     </label>
-    <input id="formly_1_input_give_to_0" type="text" ng-model="vm.appreciation.to_user" placeholder="Find a user"
+    <input id="formly_1_input_give_to_0" type="text" ng-model="vm.toUser" placeholder="Find a user"
       uib-typeahead="user as user.name for user in vm.users | filter:{$: $viewValue}"
       class="form-control"
       typeahead-template-url="userAutocompleteSuggestion.html"
