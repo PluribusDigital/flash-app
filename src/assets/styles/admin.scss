@@ -1,0 +1,64 @@
+.admin-view {
+  .header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0071bc;
+    i {
+      margin-right: 10px;
+    }
+  }
+  .admin-section {
+    margin-top: 20px;
+    .section-header {
+      font-size: 1.9rem;
+      font-weight: bold;
+    }
+    .add-user {
+      text-align: right;
+      padding-right: 10%;
+      button {
+        width: auto;
+      }
+    }
+    .search-header {
+      font-family: 'Source Sans Pro';
+      font-size: 14px;
+    }
+    .search-box {
+      display: inline-block;
+      input {
+        width: 90%;
+        border-radius: 0px;
+        float: left;
+      }
+      .search-icon {
+        float: left;
+        width: 10%;
+        height: 34px;
+        background-color: #0071bc;
+        border-radius: 0 5px 5px 0;
+        padding-top: 4px;
+        text-align: center;
+        font-size: 16px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .admin-view {
+    margin-left: 10px !important;
+    .admin-section {
+      .add-user {
+        text-align: left;
+        padding-right: 0px;
+        margin-bottom: 10px;
+      }
+    }
+    .search-box {
+      width: 80%;
+    }
+  }
+}
