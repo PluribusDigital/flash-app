@@ -48,7 +48,7 @@
         key: 'positive_effect_on_others',
         type: 'textarea',
         templateOptions: {
-          label: 'Description of Conduct',
+          label: 'Positive Effect on Others',
           placeholder: ''
         }
       }
