@@ -3,7 +3,17 @@
 ----------------------------------------*/
 
 .landing-page {
+
   margin-top: 20px;
+
+  .create-appreciation {
+    padding-bottom: 4em;
+
+    button {
+      margin: 0 auto;
+    }
+  }
+
   .landing-header {
     z-index: -1;
     margin-bottom: 20px;
