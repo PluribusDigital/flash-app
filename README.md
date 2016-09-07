@@ -41,7 +41,7 @@ Prerequisites:
  
 Setup:
  * `> bundle install` to install cucumber & related tools
- * In `/features/support/env.rb` you can change the Capybara.app_host to hit different environments/urls
+ * In `/features/support/hooks.rb` you can change the Capybara.app_host to hit different environments/urls
 
 Running specs:
 

@@ -6,7 +6,7 @@ Feature: User Login feature
   @javascript
   Scenario: Successful login
     Given I am on the 'Login' page
-     When I fill in 'foo' for 'username'
-      And I fill in 'bar' for 'password'
+     When I fill in 'gwashington' for 'username'
+      And I fill in 'george1' for 'password'
       And I select the 'sign-in-button' button
-     Then I should see text 'All Notificaitons'
+     Then I should see text 'YOUR RECOGNITIONS'
