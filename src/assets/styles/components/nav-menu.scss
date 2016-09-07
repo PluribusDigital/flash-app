@@ -86,6 +86,9 @@ nav-menu {
         font-weight: bold;
       }
     }
+    div.current {
+      border-left: 3px solid #205493;
+    }
   }
 
   @media screen and (max-width: $xs-breakpoint) {

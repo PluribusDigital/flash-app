@@ -32,6 +32,12 @@
         controller: 'UserSettingsController',
         controllerAs: 'vm'
       })
+      .state('admin', {
+        url: '/admin',
+        templateUrl: 'app/admin/admin.html',
+        controller: 'AdminController',
+        controllerAs: 'vm'
+      })
       .state('api-docs', {
         url: '/api-docs',
         templateUrl: 'app/api-docs/api-docs.html',
