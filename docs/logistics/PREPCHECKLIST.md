@@ -4,15 +4,18 @@
 1. Pre-fill task cards (API, UI, UX, Spec, etc.)
 1. Pre-fill story cards w/ B/U/T scores
 1. Create "posters"
-  a. Team Norms
-  a. Def of Done
-  a. MVP
-  a. Vision/Big Goal
+  * Team Norms
+  * Def of Done
+  * MVP
+  * Big Goal
 
 ## 30-min day-of prep
 
 1. Arrange seating
 1. Prep boards (swimlanes, titles, WIP limit)
+    * create template task cards [see backlog docs](https://github.com/STSILABS/flash-app/blob/develop/docs/process/BACKLOG.md)
+    * arrange avatar stickers
+    * arrange H/M/L, G/Y/R dot stickers
 1. Power & projectors lined up
 1. Setup easel
 1. Position Pomodoro Timers
