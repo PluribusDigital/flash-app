@@ -37,7 +37,7 @@
         </div>
       </header>
 
-      <nav-menu ng-show="vm.showNavMenu" data-menu-visible="vm.showNavMenu"></nav-menu>
+      <nav-menu ng-class="{'nav-hide': !vm.showNavMenu}" data-menu-visible="vm.showNavMenu"></nav-menu>
     </div>
     <div class="app-content" ui-view></div>
 

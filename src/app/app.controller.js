@@ -6,7 +6,7 @@
     .controller('AppController', AppController);
 
   /** @ngInject */
-  function AppController($state) {
+  function AppController($state, $scope) {
     var vm = this;
 
     vm.state = $state;
@@ -15,7 +15,7 @@
 
     vm.toggleNavMenu = function() {
       vm.showNavMenu = !vm.showNavMenu;
-    }
+    };
 
   }
 })();
