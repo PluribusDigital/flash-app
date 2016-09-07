@@ -4,31 +4,31 @@
       Appreciation When Conduct Really Affects People Positively
     </div>
     <div class="banner-button">
-      <button type="button" name="button" ui-sref="create-appreciation">Write Recognition.</button>
+      <button type="button" name="button" ui-sref="create-appreciation">Write Appreciation</button>
     </div>
   </div>
-  <div class="landing-header col-md-9">All Notifications</div>
-  <div class="notification-section col-md-9">
-    <div class="notification" ng-repeat="notification in vm.mockNotifications">
-      <div class="notification-details col-md-9 usa-grid">
-        <span class="type col-md-6"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp Kudo</span>
-        <span class="by col-md-6">from {{notification.by}} on 11/12/2016</span>
+  <div class="landing-header col-md-12">All Notifications</div>
+  <div class="notification-section col-md-12">
+    <div class="notification" ng-repeat="notification in vm.appreciations | filter:{to_user: loggedInUser.id}">
+      <div class="notification-details col-md-12 usa-grid">
+        <span class="type col-md-6"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp {{notification.title}}</span>
+        <span class="by col-md-6">from {{notification.from_user}} on {{notification.date_given | date}}</span>
         <span class="message col-md-12">
           <b>Description:</b>
-          {{notification.message}}
+          {{notification.description_of_conduct}}
           <hr>
-          <b>Success:</b>
-          {{notification.message}}
+          <b>Positive Effect:</b>
+          {{notification.positive_effect_on_others}}
         </span>
       </div>
-      <div class="notification-actions col-md-3">
+      <!-- <div class="notification-actions col-md-3">
         <button type="button" name="button">View</button>
         <button type="button" class="usa-button-outline" name="button">Details</button>
         <button type="button" class="usa-button-outline" name="button">Remove</button>
-      </div>
+      </div> -->
     </div>
   </div>
-  <div class="stat-layer col-md-3">
+  <!-- <div class="stat-layer col-md-3">
     <div class="user-stats">
       <div class="stats-title">Your Recognitions</div>
       <div class="stats-donut">
@@ -51,5 +51,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
