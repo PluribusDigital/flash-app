@@ -1,5 +1,31 @@
 <div class="create-appreciation">
   <h2>Create Appreciation</h2>
+
+  <div class="form-group">
+    <label for="formly_1_input_give_to_0" class="control-label ">
+    Give Appreciation To
+    </label>
+    <input id="formly_1_input_give_to_0" type="text" ng-model="vm.appreciation.to_user" placeholder="Find a user"
+      uib-typeahead="user as user.name for user in vm.users | filter:{$: $viewValue}"
+      class="form-control"
+      typeahead-template-url="userAutocompleteSuggestion.html"
+      typeahead-show-hint="true"
+      typeahead-min-length="0"
+      typeahead-max-length="5">
+  </div>
+
+  <script type="text/ng-template" id="userAutocompleteSuggestion.html">
+    <div>
+      <strong ng-bind-html="match.model.name | uibTypeaheadHighlight:query"></strong><br>
+      <div>
+        <strong>Title: </strong><span ng-bind-html="match.model.title | uibTypeaheadHighlight:query"></span>
+      </div>
+      <div>
+        <strong>Organization: </strong><span ng-bind-html="match.model.organization | uibTypeaheadHighlight:query"></span>
+      </div>
+    </div>
+  </script>
+
   <formly-form model="vm.appreciation" fields="vm.appreciationFields">
     <button type="submit" class="btn btn-default" ng-click="vm.submit()">Save Appreciation</button>
   </formly-form>
