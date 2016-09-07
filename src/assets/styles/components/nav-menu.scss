@@ -5,14 +5,13 @@ $app-menu-width: 175px;
 @media screen and (max-width: 600px) {
   .app-menu {
     top: 0;
-    width: 40%;
-
+    width: 50%;
+    z-index: 1000;
     .menu-header {
       height: 50px;
       line-height: 50px;
       padding: 0;
       border-bottom: none !important;
-
       .close-button {
         margin-left: 3rem;
         margin-right: 1rem;
@@ -26,7 +25,7 @@ $app-menu-width: 175px;
   .app-menu {
     top: 50px;
     width: $app-menu-width;
-
+    z-index: 1000;
     .menu-header {
       padding: 0.85rem 1.8rem;
 
@@ -43,8 +42,8 @@ $app-menu-width: 175px;
 }
 
 .app-menu {
-  z-index: 10;
-  background-color: #ffffff;
+  z-index: 1000;
+  background-color: #ffffff !important;
   border-right: solid 1px $border-color;
   position: fixed;
   left: 0;
