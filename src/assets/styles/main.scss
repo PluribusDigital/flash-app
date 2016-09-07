@@ -87,10 +87,11 @@
   .notification-section {
     z-index: -1;
     .notification {
+      margin-right: 20px;
       .notification-details {
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         .type {
-          font-size: 1.35rem;
+          font-size: 1.45rem;
           font-weight: bold;
           text-transform: uppercase;
         }
