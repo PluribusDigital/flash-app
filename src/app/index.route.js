@@ -26,6 +26,12 @@
         controller: 'PeopleController',
         controllerAs: 'vm'
       })
+      .state('user-settings', {
+        url: '/user-settings',
+        templateUrl: 'app/user-settings/user-settings.html',
+        controller: 'UserSettingsController',
+        controllerAs: 'vm'
+      })
       .state('api-docs', {
         url: '/api-docs',
         templateUrl: 'app/api-docs/api-docs.html',
