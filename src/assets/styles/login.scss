@@ -47,12 +47,15 @@
       }
     }
     .left-div {
-      font-size: 14px;
-      margin-bottom: 20px;
+      font-size: 16px;
+      margin-bottom: 15px;
       padding-left: 5rem;
       .app-name {
-        font-size: 36px;
+        font-size: 40px;
         font-family: 'Merriweather';
+      }
+      img {
+        width: 50%;
       }
     }
     .center-div {
@@ -109,6 +112,27 @@
         button {
           font-size: 12px;
           width: 110px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .login-home {
+    .login-content {
+      .left-div {
+        display: inline-block;
+        .app-name {
+          width: 70%;
+          float: right;
+          font-size: 25px;
+          padding: 20px 0 0 10px;
+        }
+        img {
+          width: 30%;
+          float: left;
         }
       }
     }

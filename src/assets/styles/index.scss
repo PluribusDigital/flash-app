@@ -78,6 +78,10 @@ header.app-header {
   .app-name {
     font-size: 1.5rem;
     line-height: $app-header-height;
+    img {
+      height: $app-header-height - 10px;
+      margin-right: 20px;
+    }
   }
 
   @media screen and (max-width: $xs-breakpoint) {
