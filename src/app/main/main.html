@@ -1,19 +1,30 @@
-<div class="landing-page row">
-  <div class="create-appreciation">
-    <button type="button" class="usa-button col-xs-12 col-sm-6 col-md-6 col-lg-6" ui-sref="create-appreciation">Create New Appreciation</button>
+<div class="landing-page">
+  <div class="landing-banner col-md-12">
+    <div class="banner-text">
+      Appreciation When Conduct Really Affects People Positively
+    </div>
+    <div class="banner-button">
+      <button type="button" name="button" ui-sref="create-appreciation">Write Recognition.</button>
+    </div>
   </div>
-  <div class="landing-header col-md-12">All Notifications</div>
+  <div class="landing-header col-md-9">All Notifications</div>
   <div class="notification-section col-md-9">
     <div class="notification" ng-repeat="notification in vm.mockNotifications">
       <div class="notification-details col-md-9 usa-grid">
-        <span class="type col-md-12"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp{{notification.type}}</span>
-        <span class="by col-md-12">{{notification.by}}</span>
-        <span class="message col-md-12">{{notification.message}}</span>
+        <span class="type col-md-6"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp Kudo</span>
+        <span class="by col-md-6">from {{notification.by}} on 11/12/2016</span>
+        <span class="message col-md-12">
+          <b>Description:</b>
+          {{notification.message}}
+          <hr>
+          <b>Success:</b>
+          {{notification.message}}
+        </span>
       </div>
       <div class="notification-actions col-md-3">
-        <button type="button" name="button">Test</button>
-        <button type="button" class="usa-button-outline" name="button">View</button>
+        <button type="button" name="button">View</button>
         <button type="button" class="usa-button-outline" name="button">Details</button>
+        <button type="button" class="usa-button-outline" name="button">Remove</button>
       </div>
     </div>
   </div>
