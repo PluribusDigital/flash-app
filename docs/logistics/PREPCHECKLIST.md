@@ -17,6 +17,7 @@
 1. Setup easel
 1. Position Pomodoro Timers
 2. Put masking tape strips (for later hanging of paper drawings, etc.)
+3. Put phone on DND mode
 3. Laptop prep: 
     * connect to wifi
     * turn off extra software (including email dropbox/box/drive sync)
