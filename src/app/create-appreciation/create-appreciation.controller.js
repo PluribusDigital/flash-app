@@ -9,17 +9,16 @@
   function CreateAppreciationController($log, $rootScope, $state, flashService) {
     var vm = this;
 
+    vm.users = [];
+
+    flashService.resource('users').list().then(function(res) {
+      vm.users = res.data.data;
+    });
+
+    vm.toUser = {};
     vm.appreciation = {};
 
     vm.appreciationFields = [
-      {
-        key: 'to_user',
-        type: 'input',
-        templateOptions: {
-          label: 'Give Appreciation To',
-          placeholder: 'Enter your peer\'s username'
-        }
-      },
       {
         key: 'date_given',
         type: 'input',
@@ -56,6 +55,7 @@
 
     vm.submit = function() {
       var appreciation = _.clone(vm.appreciation);
+      appreciation.to_user = vm.toUser.id;
 
       $log.info(appreciation);
     };
