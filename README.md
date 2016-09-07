@@ -32,3 +32,24 @@ Use the following command to run the unit tests for the application
 ```
 gulp test
 ```
+
+### Cucumber Acceptance Tests
+
+Prerequisites:
+ * Ruby 2.2.2
+ * bundler (`> gem install bundler`)
+ 
+Setup:
+ * `> bundle install` to install cucumber & related tools
+ * In `/features/support/hooks.rb` you can change the Capybara.app_host to hit different environments/urls
+
+Running specs:
+
+`> cucumber`
+
+Tags: 
+In the `/features/*.feature` files, you can tag a scenario (e.g. demo or debugging) with 
+ * `@slow` to playback in slomo 
+ * `@pause` to pause and wait for command line input
+
+
