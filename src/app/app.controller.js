@@ -15,7 +15,7 @@
 
     vm.toggleNavMenu = function() {
       vm.showNavMenu = !vm.showNavMenu;
-    }
+    };
 
   }
 })();
