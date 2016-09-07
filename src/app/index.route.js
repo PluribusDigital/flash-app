@@ -59,6 +59,12 @@
         templateUrl: 'app/developers/component-library/autocomplete.html',
         controller: 'ComponentLibraryAutocompleteController',
         controllerAs: 'vm'
+      })
+      .state('create-appreciation', {
+        url: '/create-appreciation',
+        templateUrl: 'app/create-appreciation/create-appreciation.html',
+        controller: 'CreateAppreciationController',
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/');
