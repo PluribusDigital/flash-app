@@ -3,6 +3,7 @@
 1. Pre-fill board header cards (backlog, WIP, done)
 1. Pre-fill task cards (API, UI, UX, Spec, etc.)
 1. Pre-fill story cards w/ B/U/T scores
+2. Print handout materials (10 copies)
 1. Create "posters"
   * Team Norms
   * Def of Done
