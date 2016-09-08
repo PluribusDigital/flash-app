@@ -6,11 +6,12 @@
 2. Print handout materials (10 copies)
   * Orals slides
   * Headshot slide
-1 Prints for walls
+1 Prints for walls/table
   * Wifi
   * Usernames/Logins
   * URLs
   * Headshot slide 
+  * Sample user story
 1. Create "posters"
   * Team Norms
   * Def of Done
@@ -29,6 +30,7 @@
 1. Position Pomodoro Timers
 2. Put masking tape strips (for later hanging of paper drawings, etc.)
 3. Put phone on DND mode
+4. Setup ipad with slack flash-n channel
 3. Laptop prep: 
     * connect to wifi
     * turn off extra software (including email dropbox/box/drive sync)
