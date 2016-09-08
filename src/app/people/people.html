@@ -1,0 +1,44 @@
+<div class="people-home">
+  <div class="people-header">
+    <div class="people-title">
+      <i class="fa fa-trophy"></i> People
+    </div>
+    <div class="people-filters">
+      <div class="filter">
+        <span>Filter by</span>
+        <select class="" name="">
+          <option value="option">option</option>
+        </select>
+      </div>
+      <div class="filter">
+        <span>Sort by</span>
+        <select class="" name="">
+          <option value="option">option</option>
+        </select>
+      </div>
+      <div class="view-type">
+        <i class="fa fa-th"></i>
+        <i class="fa fa-list"></i>
+      </div>
+    </div>
+  </div>
+  <div class="people-grid">
+    <div class="grid-width col-md-4" ng-repeat="person in vm.peopleList">
+      <div class="tile">
+        <div class="user-img">
+          <span class="col-md-12"><img src="/assets/images/540-logo.png" alt="" /></span>
+          <div class="rec-counts">
+            <div class="given" tooltip="Recommendations Given" tooltip-placement="bottom">5</div>
+            <div class="received" tooltip="Recommendations Received" tooltip-placement="bottom">9</div>
+          </div>
+        </div>
+        <div class="user-details">
+          <span class="name">{{person.name}}</span></br>
+          <span class="title">{{person.title}}</span></br>
+          <span class="department">{{person.department}}</span></br>
+          <button type="button" name="button">View Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

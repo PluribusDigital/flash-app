@@ -1,0 +1,22 @@
+<h2>Autocomplete Example</h2>
+
+<!-- <autocomplete model="vm.user" options="vm.autocompleteOptions" datasets="vm.userAutocompleteDataset">
+
+</autocomplete> -->
+
+<input type="text" ng-model="vm.user" placeholder="Find a user"
+  uib-typeahead="user as user.name for user in vm.userAutocompleteDataset | filter:{$: $viewValue}"
+  class="form-control"
+  typeahead-template-url="userAutocompleteSuggestion.html"
+  typeahead-show-hint="true"
+  typeahead-min-length="0">
+
+<script type="text/ng-template" id="userAutocompleteSuggestion.html">
+  <div>
+    <strong ng-bind-html="match.model.name | uibTypeaheadHighlight:query"></strong><br>
+    <span ng-bind-html="match.model.position | uibTypeaheadHighlight:query"></span><br>
+    Hired: {{match.model.hireDate}}
+  </div>
+</script>
+
+<pre>Model: {{vm.user | json}}</pre>

@@ -1,0 +1,10 @@
+src/app/app.config.js
+node_modules/
+bower_components/
+coverage/
+.sass-cache/
+.idea/
+.tmp/
+dist/
+**/.DS_Store
+*.log

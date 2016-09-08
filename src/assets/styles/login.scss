@@ -1,0 +1,144 @@
+/*----------------------------------------
+  Login
+----------------------------------------*/
+.background-image {
+  font-family: 'Source Sans Pro';
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  img {
+    z-index: -100;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    height: 80%;
+    -webkit-filter: blur(3px); /* Chrome, Safari, Opera */
+    filter: blur(3px);
+  }
+  .bg-color {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: -webkit-linear-gradient(#205493 , #112e51, #112e51); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#205493 , #112e51, #112e51); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#205493 , #112e51, #112e51); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#205493 , #112e51, #112e51); /* Standard syntax */
+    -webkit-filter: opacity(90%); /* Chrome, Safari, Opera */
+    filter: opacity(90%);
+  }
+}
+.login-home {
+  overflow-y: scroll;
+  font-family: 'Source Sans Pro';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  .login-content {
+    margin-top: 5%;
+    color: #ffffff;
+    .top-image {
+      margin-bottom: 20px;
+      img {
+        height: 70px;
+      }
+    }
+    .left-div {
+      font-size: 16px;
+      margin-bottom: 15px;
+      padding-left: 5rem;
+      .app-name {
+        font-size: 40px;
+        font-family: 'Merriweather';
+      }
+      img {
+        width: 50%;
+      }
+    }
+    .center-div {
+      color: #000000;
+      margin-bottom: 20px;
+      .login-box {
+        padding: 40px;
+        border-top: 5px solid #e31c3d;
+        background-color: #ffffff;
+        line-height: .7;
+        .alert {
+          font-size: 1.5rem;
+          margin-top: 1em;
+        }
+        .sign-in {
+          font-size: 26px;
+          .sub-text {
+            font-size: 12px;
+          }
+        }
+        .login-input {
+          margin-top: 20px;
+          margin-bottom: 40px;
+          .input-header {
+            font-size: 14px;
+          }
+          input {
+            width: 100%;
+            margin-top: 3px;
+          }
+          .show-password {
+            cursor: pointer;
+            float: right;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #205493;
+          }
+          .show-password:hover {
+            text-decoration: underline;
+          }
+        }
+        .forgot {
+          cursor: pointer;
+          font-size: 14px;
+          color: #205493;
+        }
+      }
+    }
+    .right-div {
+      padding-left: 50px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      .need-access {
+        font-size: 20px;
+      }
+      .sign-up {
+        margin-top: 20px;
+        button {
+          font-size: 12px;
+          width: 110px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .login-home {
+    .login-content {
+      .left-div {
+        display: inline-block;
+        .app-name {
+          width: 70%;
+          float: right;
+          font-size: 25px;
+          padding: 20px 0 0 10px;
+        }
+        img {
+          width: 30%;
+          float: left;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+sudo: false
+language: node_js
+node_js:
+- '0.12'
+branches:
+  only:
+  - master
+  - develop
+cache:
+  directories:
+  - node_modules
+  - bower_components
+before_script:
+- npm install -g bower
+- npm install -g gulp
+- npm install -g istanbul
+- npm install -g codeclimate-test-reporter
+- npm install -g bower-npm-resolver
+- npm install
+- bower install
+script:
+- gulp test
+after_success:
+- cp coverage/*/lcov.info .
+- codeclimate-test-reporter < lcov.info
+# generate deployable configuration
+- gulp travis-pre-build
+- cat src/app/app.config.js
+- gulp build
+deploy:
+- provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: develop.flash-app.stsilabs
+  skip_cleanup: true
+  local_dir: dist
+  on:
+    branch: develop
+- provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: prod.flash-app.stsilabs
+  skip_cleanup: true
+  local_dir: dist
+  on:
+    branch: master
+notifications:
+  slack:
+    secure: bULm9+M9xpvGCj3tnjEjMYarN470GkNAGfC8C7f6qKj65mTbtrAetOvXkqeduKFwyD1kC66X7Hd7QnaNrcv2GKpiXGNblphP+uWsMeGl3dbjwg2vYkm6zod/KY3kNZojYa1X5iprPE4v1o58D0lBclPk7XkUHq87pT1HOVZFudgjbPZrskTUvqx00XIUq+d0DSb/7nopkCN/dAJrTBU/InQ9//LDfqCORtAvzpHSZO8wlo2+IbgPDf7dAfKNS7xFdloG6vsAN1Bz6WPXaa90b+qtwyKZOMTZ1aunkJck2itT+ysnzHw+VyfupX0PYnjlyyFdQv5xRNzjOBVHSbEGLwFf5nyjCOW1nedy3TVW4G5/KW7Q4KVAXsQkmhL5VeMcuVDG5Bm3Gj6rG7LlrensoBJU4Eh3rjZnH2G/XXEkbFtNzP+mumoojYw3AM79O5EtC46tvNXxoA2RgzMH+fdUZPCherHSoy481qPZHNYS7GSPL9/OkPb1Mi7oNoXqeS5UZyNb9q6KjG41qo15y1yuwl/8XcKqFdB1cMjG6KpROWgNRCDQMLH9pA55QmMTAEztmeyISrFqjg6xEtE9K9epjEJJmDTiIdhYu86oLRimw0ZJvrv0BKuPHPPURCEiqNQBjqp+4w9lPkE2spa2uBPoVo3XydKaIH0k/xy5bR33JHk=

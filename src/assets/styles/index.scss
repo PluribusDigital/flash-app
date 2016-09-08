@@ -1,0 +1,127 @@
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+/*----------------------------------------
+[Table of Contents]
+
+  1. Variables
+  2. Bootstrap overrides
+  3. Global
+  4. Main
+----------------------------------------*/
+
+/*----------------------------------------
+  1. Variables
+----------------------------------------*/
+
+@import 'variables';
+
+/*----------------------------------------
+  2. Bootstrap overrides
+----------------------------------------*/
+
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+ul li::before {
+  content: none !important;
+}
+
+/*----------------------------------------
+  3. Global
+----------------------------------------*/
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: $grey;
+  color: $black;
+  padding: 0.2em 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.center-all {
+  text-align: center;
+}
+
+/*----------------------------------------
+  4. Main
+----------------------------------------*/
+
+header.app-header {
+  z-index: 10;
+  color: white;
+  background: linear-gradient(to right, #376996, #112e51);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: $app-header-height;
+
+  .menu-toggle,
+  .menu-toggle:hover {
+    color: white;
+  }
+
+  .menu-toggle {
+    margin-right: 1rem;
+    display: none;
+  }
+
+  .app-name {
+    font-size: 1.5rem;
+    line-height: $app-header-height;
+    img {
+      height: $app-header-height - 10px;
+      margin-right: 20px;
+    }
+  }
+
+  @media screen and (max-width: $xs-breakpoint) {
+    .menu-toggle {
+      display: inline;
+    }
+
+    .logo {
+      text-align: right !important;
+    }
+    .app-name {
+      font-size: 1rem;
+    }
+  }
+
+  .logo {
+    text-align: center;
+
+    img {
+      margin-top: 5px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.app-content {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+@media screen and (min-width: $xs-breakpoint) {
+  .app-content {
+    margin-left: calc(#{$app-menu-width} + 1em);
+  }
+}
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
