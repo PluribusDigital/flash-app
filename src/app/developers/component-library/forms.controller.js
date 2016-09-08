@@ -38,6 +38,13 @@
         }
       },
       {
+        key: 'date',
+        type: 'datepicker',
+        templateOptions: {
+          label: 'Date'
+        }
+      },
+      {
         key: 'file',
         type: 'file',
         templateOptions: {
