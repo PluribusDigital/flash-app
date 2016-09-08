@@ -29,7 +29,8 @@
     "typeahead.js": "~0.11.1",
     "handlebars": "~4.0.5",
     "chart.js": "npm:chart.js#2.x",
-    "ngstorage": "~0.3.11"
+    "ngstorage": "~0.3.11",
+    "angular-ui-grid": "~3.2.1"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.8"
@@ -72,7 +73,7 @@
     }
   },
   "resolutions": {
-    "angular": "~1.4.8",
+    "angular": "^1.2.x",
     "bootstrap": "~3.3.7"
   }
 }

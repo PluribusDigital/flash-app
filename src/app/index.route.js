@@ -79,6 +79,12 @@
         templateUrl: 'app/developers/component-library/autocomplete.html',
         controller: 'ComponentLibraryAutocompleteController',
         controllerAs: 'vm'
+      })
+      .state('component-library.uigrid', {
+        url: '/uigrid',
+        templateUrl: 'app/developers/component-library/uigrid.html',
+        controller: 'ComponentLibraryUIGridController',
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/');
