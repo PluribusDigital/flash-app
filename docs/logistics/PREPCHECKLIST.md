@@ -24,7 +24,9 @@
 1. Prep boards (swimlanes, titles, WIP limit)
     * create template task cards [see backlog docs](https://github.com/STSILABS/flash-app/blob/develop/docs/process/BACKLOG.md)
     * arrange avatar stickers
+    * avatar stickers on headshot printout at board
     * arrange H/M/L, G/Y/R dot stickers
+    * swim lanes w/ tape
 1. Hang posters
     * Team Norms
     * Def of Done
