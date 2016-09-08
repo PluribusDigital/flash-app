@@ -25,6 +25,14 @@
     * create template task cards [see backlog docs](https://github.com/STSILABS/flash-app/blob/develop/docs/process/BACKLOG.md)
     * arrange avatar stickers
     * arrange H/M/L, G/Y/R dot stickers
+1. Hang posters
+    * Team Norms
+    * Def of Done
+    * MVP
+    * Big Goal
+    * Map
+    * Truth Board
+    * Handouts & prints from 'day before' list
 1. Power & projectors lined up
 1. Setup easel
 1. Position Pomodoro Timers
