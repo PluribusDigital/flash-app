@@ -1,7 +1,9 @@
 <div class="form-test">
   <h2>Form Example</h2>
   <formly-form model="vm.user" fields="vm.userFields">
-    <button type="submit" class="btn btn-default" ng-click="vm.submit(vm.user)">Submit</button>
-    <textarea readonly="readonly">{{vm.submittedUser}}</textarea>
+    <button type="submit" class="usa-button btn btn-default" ng-click="vm.submit(vm.user)">Submit</button>
+    <br>
+    <br>
+    <pre>{{vm.submittedUser | json}}</pre>
   </formly-form>
 </div>
