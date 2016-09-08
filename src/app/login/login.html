@@ -20,12 +20,12 @@
 
         <div class="login-input">
           <span class="input-header">Username or email address</span></br>
-          <input type="text" name="name" value="" ng-model="vm.username"></br>
+          <input type="text" name="username" value="" ng-model="vm.username"></br>
           <span class="input-header">Password</span></br>
-          <input type="password" name="name" value="" ng-model="vm.password">
+          <input type="password" name="password" value="" ng-model="vm.password">
           <span class="show-password">Show password</span>
         </div>
-        <button type="button" name="button" ng-click="vm.login(vm.username, vm.password)">Sign in</button></br>
+        <button type="button" name="signin" id="sign-in-button" ng-click="vm.login(vm.username, vm.password)">Sign in</button></br>
         <span class="forgot">Forgot username?</span></br>
         <span class="forgot">Forgot password?</span>
       </div>
