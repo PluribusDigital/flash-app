@@ -4,6 +4,13 @@
 1. Pre-fill task cards (API, UI, UX, Spec, etc.)
 1. Pre-fill story cards w/ B/U/T scores
 2. Print handout materials (10 copies)
+  * Orals slides
+  * Headshot slide
+1 Prints for walls
+  * Wifi
+  * Usernames/Logins
+  * URLs
+  * Headshot slide 
 1. Create "posters"
   * Team Norms
   * Def of Done
@@ -26,3 +33,4 @@
     * connect to wifi
     * turn off extra software (including email dropbox/box/drive sync)
     * open slack
+    * build/run scaffold app
