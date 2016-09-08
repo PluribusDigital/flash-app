@@ -109,12 +109,13 @@ header.app-header {
 }
 
 .app-content {
-  margin-top: 70px;
+  margin-top: 60px;
+  padding: 20px;
 }
 
 @media screen and (min-width: $xs-breakpoint) {
   .app-content {
-    margin-left: calc(#{$app-menu-width} + 2em);
+    margin-left: calc(#{$app-menu-width} + 1em);
   }
 }
 
