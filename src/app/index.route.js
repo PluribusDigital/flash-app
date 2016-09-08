@@ -6,7 +6,15 @@
     .config(routerConfig);
 
   /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider) {
+  function routerConfig($provide, $stateProvider, $urlRouterProvider) {
+    $provide.decorator('$state', function($delegate, $rootScope) {
+      $rootScope.$on('$stateChangeStart', function(event, state, params) {
+        $delegate.next = state;
+        $delegate.toParams = params;
+      });
+      return $delegate;
+    });
+
     $stateProvider
       .state('login', {
         url: '/',
@@ -14,30 +22,42 @@
         controller: 'LoginController',
         controllerAs: 'vm'
       })
+      .state('not-authorized', {
+        // url: '/not-authorized',
+        template: 'Not authorized'
+      })
       .state('home', {
         url: '/home',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        resolve: { authenticate: authenticate }
       })
       .state('people', {
         url: '/people',
         templateUrl: 'app/people/people.html',
         controller: 'PeopleController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        resolve: { authenticate: authenticate }
       })
       .state('user-settings', {
         url: '/user-settings',
         templateUrl: 'app/user-settings/user-settings.html',
         controller: 'UserSettingsController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        resolve: { authenticate: authenticate }
       })
       .state('admin', {
         url: '/admin',
         templateUrl: 'app/admin/admin.html',
         controller: 'AdminController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        data: {
+          roles: ['Admin']
+        },
+        resolve: { authenticate: authenticate }
       })
+      //Developer/Docs routes
       .state('api-docs', {
         url: '/api-docs',
         templateUrl: 'app/api-docs/api-docs.html',
@@ -62,6 +82,34 @@
       });
 
     $urlRouterProvider.otherwise('/');
+
+    function authenticate($rootScope, $q, authService, $state, $timeout) {
+      var authDefer = $q.defer();
+
+      authService.getIdentity()
+        .then(function(identity) {
+
+          if ($state.next.data && $state.next.data.roles.indexOf(identity.role) === -1) {
+            $timeout(function() {
+              $state.go('not-authorized')
+            });
+
+            authDefer.reject({
+              message: 'Not authorized'
+            });
+          } else {
+            authDefer.resolve(identity);
+          }
+        })
+        .catch(function(err) {
+          $timeout(function() {
+            $state.go('login')
+          });
+          authDefer.reject(err);
+        });
+
+      return authDefer.promise;
+    }
   }
 
 })();

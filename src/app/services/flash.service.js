@@ -6,11 +6,11 @@
     .module('flashApp')
     .factory('flashService', flashService);
 
-    function flashService($log, $http, $q, $rootScope, config, $base64) {
+    function flashService($log, $http, $q, $sessionStorage, config, $base64) {
 
       var requestParams = function(params) {
         var flashParams = params;
-        var userpassEncode = $base64.encode($rootScope.username + ':' + $rootScope.password);
+        var userpassEncode = $base64.encode($sessionStorage.userCredentials.username + ':' + $sessionStorage.userCredentials.password);
 
         if (!flashParams.headers) {flashParams.headers = {};}
         flashParams.headers['Content-Type'] = 'application/json';

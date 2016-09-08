@@ -6,17 +6,25 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($log, $rootScope, $state, flashService) {
+  function LoginController($log, $rootScope, $state, authService) {
     var vm = this;
     vm.setCredentials = setCredentials;
     vm.login = login;
+    vm.loginError = false;
 
     function login(username, password){
-      vm.setCredentials(username, password);
-      flashService.resource('users').get(username).then(function(res){
-        $rootScope.loggedInUser = res.data.data;
-        $state.go('home');
-      });
+      authService.authenticate(username, password)
+        .then(function() {
+          $state.go('home');
+        })
+        .catch(function() {
+          vm.loginError = true;
+        });
+      // vm.setCredentials(username, password);
+      // flashService.resource('users').get(username).then(function(res){
+      //   $rootScope.loggedInUser = res.data.data;
+      //   $state.go('home');
+      // });
     }
 
 
