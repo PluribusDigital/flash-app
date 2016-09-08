@@ -31,7 +31,7 @@
     * MVP
     * Big Goal
     * Map
-    * Truth Board
+    * Facts Board
     * Handouts & prints from 'day before' list
 1. Power & projectors lined up
 1. Setup easel
