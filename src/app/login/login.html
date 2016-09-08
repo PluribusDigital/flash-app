@@ -4,15 +4,20 @@
     <div class="col-md-12 center-all top-image">
       <img src="/assets/images/us-flag.png" alt="USA Flag" />
     </div>
-    <div class="col-md-4 -all left-div">
+    <div class="col-sm-6 col-md-4 -all left-div">
       Welcome to </br></br>
       <span class="app-name">Kudo Karma</span>
       <img src="/assets/images/logo-white.png" alt="Kudo" />
     </div>
-    <div class="col-md-4 center-div">
+    <div class="col-sm-6 col-md-4 center-div">
       <div class="login-box">
         <span class="sign-in">Sign In<span></br>
         <span class="sub-text">or create an account</span>
+
+        <div ng-if="vm.loginError" class="alert alert-danger">
+          Invalid username and/or password
+        </div>
+
         <div class="login-input">
           <span class="input-header">Username or email address</span></br>
           <input type="text" name="name" value="" ng-model="vm.username"></br>
@@ -25,7 +30,7 @@
         <span class="forgot">Forgot password?</span>
       </div>
     </div>
-    <div class="col-md-4 right-div">
+    <div class="col-sm-12 col-md-4 right-div">
       <span class="need-access">Need Access?</span></br></br>
       <span>Please contact the system administrator to gain access.</span>
       <div class="sign-up">

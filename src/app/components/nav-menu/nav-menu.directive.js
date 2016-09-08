@@ -8,7 +8,8 @@
       return {
         retrict: 'E',
         scope: {
-          menuVisible: '='
+          menuVisible: '=',
+          logoutHandler: '='
         },
         bindToController: true,
         controller: 'NavMenuController',

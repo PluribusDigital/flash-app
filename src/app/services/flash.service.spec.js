@@ -17,9 +17,14 @@
     beforeEach(module(function($provide) {
       $provide.constant('config', mockConfig);
     }));
-    beforeEach(inject(function(_flashService_, _$httpBackend_) {
+    beforeEach(inject(function(_flashService_, _$httpBackend_, $sessionStorage) {
       flashService = _flashService_;
       $httpBackend = _$httpBackend_;
+
+      $sessionStorage.userCredentials = {
+        username: 'tjefferson',
+        password: 'thomas3'
+      };
     }));
 
     afterEach(function() {

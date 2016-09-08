@@ -4,28 +4,24 @@
   describe('LoginController', function(){
     var vm;
     var $rootScope;
-    var flashService;
+    var authService;
     var $state;
     var $q;
     var $scope;
-    var userResource = {
-      get: function() {}
-    };
 
     beforeEach(module('flashApp'));
     beforeEach(module('flashApp.core', function(AngularyticsProvider) {
       AngularyticsProvider.setEventHandlers(['Console']);
     }));
-    beforeEach(inject(function($controller, _flashService_, _$rootScope_, _$state_, _$q_) {
+    beforeEach(inject(function($controller, _authService_, _$rootScope_, _$state_, _$q_) {
       $q = _$q_;
       $rootScope = _$rootScope_;
       $scope = $rootScope.$new();
-      flashService = _flashService_;
+      authService = _authService_;
       $state = _$state_;
-      spyOn(flashService, 'resource').and.returnValue(userResource);
 
       vm = $controller('LoginController', {
-        flashService: flashService,
+        authService: authService,
         '$state': $state
       });
     }));
@@ -34,25 +30,33 @@
       var loggedInUser = {
           username: 'gwashington'
         },
-        userGetDeferred = $q.defer();
-      spyOn(userResource, 'get').and.returnValue(userGetDeferred.promise);
+        authDefer = $q.defer();
+      spyOn(authService, 'authenticate').and.returnValue(authDefer.promise);
       spyOn($state, 'go');
 
       vm.login('gwashington', 'george1');
-      userGetDeferred.resolve({
-        data: {
-          data: loggedInUser
-        }
-      });
+      authDefer.resolve(loggedInUser);
       $scope.$apply();
 
-      expect(userResource.get).toHaveBeenCalledWith('gwashington');
-
-      expect($rootScope.username).toEqual('gwashington');
-      expect($rootScope.password).toEqual('george1');
-      expect($rootScope.loggedInUser).toEqual(loggedInUser);
+      expect(authService.authenticate).toHaveBeenCalledWith('gwashington', 'george1');
 
       expect($state.go).toHaveBeenCalledWith('home');
+      expect(vm.loginError).toEqual(false);
+    });
+
+    it('should toggle error flag if authentication was unsuccessful', function() {
+      var authDefer = $q.defer();
+      spyOn(authService, 'authenticate').and.returnValue(authDefer.promise);
+      spyOn($state, 'go');
+
+      vm.login('gwashington', 'george1');
+      authDefer.reject({});
+      $scope.$apply();
+
+      expect(authService.authenticate).toHaveBeenCalledWith('gwashington', 'george1');
+
+      expect($state.go).not.toHaveBeenCalled();
+      expect(vm.loginError).toEqual(true);
     });
   });
 })();

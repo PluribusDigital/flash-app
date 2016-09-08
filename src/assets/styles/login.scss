@@ -66,6 +66,10 @@
         border-top: 5px solid #e31c3d;
         background-color: #ffffff;
         line-height: .7;
+        .alert {
+          font-size: 1.5rem;
+          margin-top: 1em;
+        }
         .sign-in {
           font-size: 26px;
           .sub-text {
