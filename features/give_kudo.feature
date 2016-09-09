@@ -5,10 +5,10 @@ Feature: Give a Kudo
   So that I can recognize them for a job well done
 
   Scenario: Successfully Give kudo
-    Given I am logged in as 'gwashington'
+    Given I am logged in as 'alincoln'
       And I am on the 'home' page
      When I select the 'Give Kudo' button
-      And I fill in 'alincoln' for 'Nominee'
+      And I fill in 'wtaft' for 'Nominee'
       And I fill in 'thanks for helping on the DHS FLASH project' for 'Comment'
       And I select the 'Teamwork' option for 'Category'
       And I select the 'Submit' button
