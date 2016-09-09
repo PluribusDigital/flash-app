@@ -4,17 +4,36 @@
   describe('NavMenuController', function(){
     var vm;
     var $state;
+    var authService;
+    var $scope;
+    var loggedInUser = {
+      username: 'gwashington'
+    };
 
     beforeEach(module('flashApp'));
-    beforeEach(inject(function(_$controller_) {
+    beforeEach(inject(function($q, $rootScope, _$controller_, _authService_) {
+      authService = _authService_;
       $state = {
         current: {
           name: ""
         }
       };
 
-      vm = _$controller_('NavMenuController', {'$state': $state});
+      $scope = $rootScope.$new();
+
+      spyOn(authService, 'getIdentity').and.returnValue($q(function(resolve) {
+        resolve(loggedInUser);
+      }));
+
+      vm = _$controller_('NavMenuController', {'$state': $state, authService: authService});
+      $scope.$apply();
     }));
+
+    describe('initialization', function() {
+      it('should set logged in user', function() {
+        expect(vm.userName).toEqual(loggedInUser);
+      });
+    });
 
     describe('hideMenu()', function() {
       it('should hide the nav menu', function() {

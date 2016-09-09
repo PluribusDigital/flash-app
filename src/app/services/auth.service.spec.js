@@ -9,6 +9,7 @@
     };
     var $sessionStorage = {};
     var $scope;
+    var $rootScope;
     var $q;
 
     beforeEach(module('flashApp'));
@@ -18,10 +19,11 @@
     // beforeEach(module(function($provide) {
     //   $provide.constant('config', mockConfig);
     // }));
-    beforeEach(inject(function(_$q_, _authService_, _flashService_, $rootScope) {
+    beforeEach(inject(function(_$q_, _authService_, _flashService_, _$rootScope_) {
       $q = _$q_;
       authService = _authService_;
       flashService = _flashService_;
+      $rootScope = _$rootScope_;
       $scope = $rootScope.$new();
       spyOn(flashService, 'resource').and.returnValue(userResource);
     }));
@@ -102,6 +104,8 @@
         username: 'tjefferson',
         password: 'thomas3'
       });
+      expect($rootScope.username).toEqual('tjefferson');
+      expect($rootScope.password).toEqual('thomas3');
     });
 
     it('should raise error if it could not authenticate with provided credentials', function(done) {
@@ -122,6 +126,9 @@
         password: 'george1'
       };
 
+      $rootScope.username = 'gwashington';
+      $rootScope.password = 'george1';
+
       authService.setIdentity({
         username: 'gwashington'
       });
@@ -134,6 +141,8 @@
       $scope.$apply();
 
       expect($sessionStorage.userCredentials).toEqual(null);
+      expect($rootScope.username).toEqual(null);
+      expect($rootScope.password).toEqual(null);
 
     });
   });

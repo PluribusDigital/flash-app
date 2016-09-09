@@ -19,9 +19,12 @@
     });
 
   /* @ngInject */
-  function NavMenuController($state, $rootScope) {
+  function NavMenuController($state, $rootScope, authService) {
     var vm = this;
-    vm.userName = $rootScope.loggedInUser;
+
+    authService.getIdentity().then(function(loggedInUser) {
+      vm.userName = loggedInUser;
+    });
 
     vm.hideMenu = function() {
       vm.menuVisible = false;
