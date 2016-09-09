@@ -7,20 +7,20 @@ Feature: Give (and Get) a Kudo
   Scenario: Successfully Give kudo
     Given I am logged in as 'alincoln'
       And I am on the 'home' page
-     When I select the 'Give Kudo' button
-      And I fill in 'taf' for 'Nominee'
+     # When I select the 'Give Kudo' button
+     When I fill in 'taf' for 'Nominee'
       And I select "William Taft" from the nominee result list
       And I fill in 'thanks for helping on the DHS FLASH project' for 'Comment'
       And I select the 'Teamwork' option for 'Category'
       And I select the 'Submit' button
-     Then I should be back on the 'home' page
+     Then I should be on the home page
       And I should see text 'Kudo created'
 
   Scenario: Successfully Get kudo
     Given I am logged in as 'alincoln'
       And I am on the 'home' page
-     When I select the 'Give Kudo' button
-      And I fill in 'taf' for 'Nominee'
+     # When I select the 'Give Kudo' button
+     When I fill in 'taf' for 'Nominee'
       And I select "William Taft" from the nominee result list
       And I fill in 'thanks for helping on the DHS FLASH project' for 'Comment'
       And I select the 'Teamwork' option for 'Category'

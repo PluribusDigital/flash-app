@@ -13,4 +13,4 @@ Feature: Add a User
       And I fill in 'homer@simpsons.com' for 'email'
       And I select the 'Submit' button
       And I logout and log back in as 'hsimpson'
-     Then I should be on the home page after successful login
+     Then I should be on the home page
