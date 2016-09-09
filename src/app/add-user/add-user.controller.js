@@ -44,10 +44,10 @@
     });
 
     vm.submit = function() {
-      var kudo = {};
-      kudo.name = vm.new_user.first_name + ' ' + vm.new_user.last_name;
-      kudo.email = vm.new_user.email;
-      $log.info(kudo);
+      var user = {};
+      user.name = vm.new_user.first_name + ' ' + vm.new_user.last_name;
+      user.email = vm.new_user.email;
+      $log.info(user);
       vm.userSubmitted = true;
     };
   }
