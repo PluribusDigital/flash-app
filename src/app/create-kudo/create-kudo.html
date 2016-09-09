@@ -2,7 +2,10 @@
   <h2>Give a Kudo</h2>
 
   <div ng-if="vm.kudoSubmitted" class="alert alert-success">
-    Your kudo has been submitted. Fill out the form again to submit another kudo!</div>
+    Your kudo has been submitted. Fill out the form again to give another kudo!</div>
+
+  <div ng-if="vm.kudoSubmitError" class="alert alert-danger">
+    There was an error submitting your kudo</div>
 
   <div class="form-group">
     <label>Nominee</label>

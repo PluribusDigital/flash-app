@@ -16,8 +16,9 @@
 
     vm.nominee = null;
 
-    vm.kudo = null;
+    vm.kudo = {};
     vm.kudoSubmitted = false;
+    vm.kudoSubmitError = false;
 
     vm.kudoFields = [
       {
@@ -63,8 +64,20 @@
     vm.submit = function() {
       var kudo = _.clone(vm.kudo);
       kudo.nominator = vm.loggedInUser.id;
-      kudo.nominee = vm.nominee.id;
-      $log.info(kudo);
+      kudo.nominee = vm.nominee ? vm.nominee.id : null;
+
+      flashService.resource('kudos').create(kudo)
+        .then(function() {
+          vm.kudoSubmitError = false;
+          vm.kudoSubmitted = true;
+
+          vm.kudo = {};
+          vm.nominee = null;
+        })
+        .catch(function() {
+          vm.kudoSubmitError = true;
+          vm.kudoSubmitted = false;
+        })
     };
   }
 
