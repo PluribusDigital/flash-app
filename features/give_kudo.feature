@@ -4,7 +4,7 @@ Feature: Give a Kudo
   I want to be able to give a kudo to a peer
   So that I can recognize them for a job well done
 
-  Scenario: Give kudo
+  Scenario: Successfully Give kudo
     Given I am logged in as 'gwashington'
       And I am on the 'home' page
      When I select the 'Give Kudo' button
@@ -12,8 +12,7 @@ Feature: Give a Kudo
       And I fill in 'thanks for helping on the DHS FLASH project' for 'Comment'
       And I select the 'Teamwork' option for 'Category'
       And I select the 'Submit' button
-      And I logout and log back in as 'alincoln'
-      And I am on the 'home' page
-     Then I should see text 'thanks for helping on the DHS FLASH project'
+     Then I should be back on the 'home' page
+      And I should see text 'Kudo created'
 
   
