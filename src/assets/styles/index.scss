@@ -117,6 +117,9 @@ header.app-header {
   .app-content {
     margin-left: calc(#{$app-menu-width} + 1em);
   }
+  .app-content.api-docs-content {
+    margin-left: 0;
+  }
 }
 
 /**

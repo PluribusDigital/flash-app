@@ -2,13 +2,11 @@
   <div class="menu-header"><a class="close-button" href ng-click="vm.hideMenu()"><i class="fa fa-bars"></i></a> Menu</div>
   <div>
     <div ng-class="{'current': vm.isInSection('home')}"><a href="#/home" ng-class="{'nav-current': vm.isInSection('home')}">Home</a></div>
-
     <div ng-class="{'current': vm.isInSection('leaderboard')}"><a href ng-class="{'nav-current': vm.isInSection('leaderboard')}">Leaderboard</a></div>
     <div ng-class="{'current': vm.isInSection('mycolleagues')}"><a href ng-class="{'nav-current': vm.isInSection('mycolleagues')}">My Colleagues</a></div>
     <div ng-class="{'current': vm.isInSection('myprofile')}"><a href ng-class="{'nav-current': vm.isInSection('myprofile')}">My Profile</a></div>
     <div ng-class="{'current': vm.isInSection('reports')}"><a href ng-class="{'nav-current': vm.isInSection('reports')}">Reports</a></div>
     <div ng-class="{'current': vm.isInSection('faqs')}"><a href ng-class="{'nav-current': vm.isInSection('faqs')}"><i class="fa fa-comment-o"></i> FAQs</a></div>
-
     <div ng-if="vm.userName.role == 'Admin'" ng-class="{'current': vm.isInSection('admin')}"><a href="#/admin" ng-class="{'nav-current': vm.isInSection('admin')}"><i class="fa fa-lock"></i> Admin</a></div>
   </div>
 
