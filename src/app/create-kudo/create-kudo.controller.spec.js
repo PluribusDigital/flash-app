@@ -24,6 +24,7 @@
       }
     ];
     var loggedInUser = {
+      id: 2345,
       username: 'bobama'
     };
 
@@ -75,19 +76,61 @@
     });
 
     it('should submit new kudo to api', function() {
-      // vm.kudo = {
-      //   nominee: 1234,
-      //   nominator: 2345,
-      //   category: 'Teamwork',
-      //   comment: 'Test 1234'
-      // };
-      // var createdKudo =
-      //
-      // spyOn(kudoResource, 'create').and.returnValue($q(function(resolve) {
-      //   resolve(createdKudo);
-      // }));
-      //
-      // vm.submit();
+
+      vm.nominee = {
+        id: 12345
+      };
+
+      vm.kudo = {
+        category: 'Teamwork',
+        comment: 'Test 1234'
+      };
+      var createdKudo = {
+        id: 98765
+      };
+
+      spyOn(kudoResource, 'create').and.returnValue($q(function(resolve) {
+        resolve(createdKudo);
+      }));
+
+      vm.submit();
+      $scope.$apply();
+
+      var expectedKudo = {
+        category: 'Teamwork',
+        comment: 'Test 1234',
+        nominator: 2345,
+        nominee: 12345
+      };
+
+      expect(kudoResource.create).toHaveBeenCalledWith(expectedKudo);
+      expect(vm.kudo).toEqual({});
+      expect(vm.nominee).toEqual(null);
+      expect(vm.kudoSubmitted).toBe(true);
+      expect(vm.kudoSubmitError).toBe(false);
+
+
+    });
+
+    it('should handle new kudo submit error', function() {
+      vm.nominee = {
+        id: 12345
+      };
+
+      vm.kudo = {
+        category: 'Teamwork',
+        comment: 'Test 1234'
+      };
+
+      spyOn(kudoResource, 'create').and.returnValue($q(function(resolve, reject) {
+        reject({});
+      }));
+
+      vm.submit();
+      $scope.$apply();
+
+      expect(vm.kudoSubmitted).toBe(false);
+      expect(vm.kudoSubmitError).toBe(true);
 
 
     });
