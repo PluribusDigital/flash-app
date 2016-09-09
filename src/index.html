@@ -37,9 +37,13 @@
         </div>
       </header>
 
-      <nav-menu ng-class="{'nav-hide': !vm.showNavMenu}" data-menu-visible="vm.showNavMenu" data-logout-handler="vm.logout"></nav-menu>
+      <div  class="ng-hide" ng-hide="vm.state.current.name == 'api-docs'">
+        <nav-menu ng-class="{'nav-hide': !vm.showNavMenu}" data-menu-visible="vm.showNavMenu" data-logout-handler="vm.logout"></nav-menu>
+      </div>
     </div>
-    <div class="app-content" ui-view></div>
+    <div class="app-content" ng-class="vm.state.current.name + '-content'">
+      <div ui-view></div>
+    </div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
