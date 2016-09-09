@@ -1,12 +1,14 @@
 <div class="landing-page">
   <div class="landing-banner col-md-12">
     <img src="/assets/images/logo-blue.png" alt="Kudo" />
-    <div class="banner-text">
-      <span>Kudo Karma</span>
+    <div class="banner-text col-md-9">
+      <span style="font-size: smaller">Acknowledge your peers with Kudo Karma</span>
+    </div>
+    <div class="col-md-offset-1 col-md-3">
       <button type="button" class="usa-button usa-button-default" ui-sref="create-kudo" name="button">Give a Kudo</button>
     </div>
   </div>
-  <div class="landing-header col-md-12">All Notifications</div>
+  <div class="landing-header col-md-12">At a Glance</div>
   <div class="notification-section col-md-9">
     <div class="notification" ng-repeat="notification in vm.mockNotifications">
       <div class="notification-details col-md-9 usa-grid">
@@ -23,17 +25,13 @@
   </div>
   <div class="stat-layer col-md-3">
     <div class="user-stats">
-      <div class="stats-title">Your Recognitions</div>
+      <div class="stats-title">Your Kudo Points</div>
       <div class="stats-donut">
         <canvas id="stats-donut" height="200" class="chart chart-doughnut"
           chart-data="vm.statsData" chart-labels="vm.statsLabels">
         </canvas>
       </div>
       <div class="stats-metrics">
-        <div class="metric">
-          <div class="number total">14</div>
-          <div class="label">Test</div>
-        </div>
         <div class="metric">
           <div class="number given">5</div>
           <div class="label">Test</div>
