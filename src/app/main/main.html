@@ -1,11 +1,18 @@
 <div class="landing-page">
+  <div class="landing-banner col-md-12">
+    <img src="/assets/images/logo-blue.png" alt="Kudo" />
+    <div class="banner-text">
+      <span>Kudo Karma</span>
+      <button type="button" class="usa-button usa-button-default" ui-sref="create-kudo" name="button">Give a Kudo</button>
+    </div>
+  </div>
   <div class="landing-header col-md-12">All Notifications</div>
   <div class="notification-section col-md-9">
     <div class="notification" ng-repeat="notification in vm.mockNotifications">
       <div class="notification-details col-md-9 usa-grid">
-        <span class="type col-md-12"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp{{notification.type}}</span>
-        <span class="by col-md-12">{{notification.by}}</span>
-        <span class="message col-md-12">{{notification.message}}</span>
+        <span class="type col-md-12"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp{{notification.category}}</span>
+        <span class="by col-md-12">{{notification.from}}</span>
+        <span class="message col-md-12">{{notification.comment}}</span>
       </div>
       <div class="notification-actions col-md-3">
         <button type="button" class="usa-button" name="button">Test</button>
