@@ -39,8 +39,16 @@
       var user = {};
       user.name = vm.new_user.first_name + ' ' + vm.new_user.last_name;
       user.email = vm.new_user.email;
-      $log.info(user);
-      vm.userSubmitted = true;
+      flashService.resource('users').create(user)
+        .then(function(res) {
+          vm.userSubmitted = true;
+          vm.username = res.data.data.username;
+          vm.password = "kudos";
+          vm.new_user = {};
+        })
+        .catch(function() {
+          vm.userSubmitted = false;
+        });
     };
   }
 
