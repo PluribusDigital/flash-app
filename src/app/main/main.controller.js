@@ -6,28 +6,48 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController() {
+  function MainController(flashService, authService) {
     var vm = this;
+
+    var loggedInUser = null;
+    authService.getIdentity().then(function(identity) {
+      loggedInUser = identity;
+    });
+
     vm.statsLabels = ["Given", "Received"];
-    vm.statsData = [8, 10];
-    vm.userStats = { total: 18, given:8, received:10 };
-    vm.mockNotifications = [
-      {
-        category: "Teamwork",
-        from: "John Doe",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      },
-      {
-        category: "Delivery",
-        from: "Ben E.",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      },
-      {
-        category: "Experiment",
-        from: "Ronald M.",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    vm.statsData = [];
+    vm.userStats = { total: 0, given: 0, received: 0 };
+
+    vm.users = {};
+    flashService.resource('users').list().then(function(res) {
+      var users = res.data.data;
+
+      for (var i = 0; i < users.length; i++) {
+        vm.users[users.id] = users.name;
       }
-    ];
+    });
+
+    flashService.resource('kudos').list().then(function(res) {
+      var kudos = res.data.data;
+      var myKudos = [];
+
+      for (var i = 0; i < kudos.length; i++) {
+        if (kudos[i].nominee === loggedInUser.id) {
+          myKudos.push(kudos[i]);
+          vm.userStats.total++;
+          vm.userStats.received++;
+        } else if (kudos[i].nominator == loggedInUser.id) {
+          vm.userStats.given++;
+          vm.userStats.total++;
+        }
+      }
+      vm.statsData = [vm.userStats.given, vm.userStats.received];
+      _.sortBy(myKudos, 'created_date');
+
+      console.log(myKudos);
+
+      vm.kudos = myKudos;
+    });
 
   }
 })();

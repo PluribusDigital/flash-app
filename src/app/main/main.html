@@ -10,16 +10,11 @@
   </div>
   <div class="landing-header col-md-12">At a Glance</div>
   <div class="notification-section col-md-9">
-    <div class="notification" ng-repeat="notification in vm.mockNotifications">
-      <div class="notification-details col-md-9 usa-grid">
+    <div class="notification" ng-repeat="notification in vm.kudos">
+      <div class="notification-details">
         <span class="type col-md-12"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp{{notification.category}}</span>
-        <span class="by col-md-12">{{notification.from}}</span>
+        <span class="by col-md-12">{{vm.users[notification.nominator]}}</span>
         <span class="message col-md-12">{{notification.comment}}</span>
-      </div>
-      <div class="notification-actions col-md-3">
-        <button type="button" class="usa-button" name="button">Test</button>
-        <button type="button" class="usa-button usa-button-outline" name="button">View</button>
-        <button type="button" class="usa-button usa-button-outline" name="button">Details</button>
       </div>
     </div>
   </div>
@@ -33,12 +28,12 @@
       </div>
       <div class="stats-metrics">
         <div class="metric">
-          <div class="number given">5</div>
-          <div class="label">Test</div>
+          <div class="number given">{{vm.userStats.given}}</div>
+          <div class="label">Given</div>
         </div>
         <div class="metric">
-          <div class="number received">9</div>
-          <div class="label">Test</div>
+          <div class="number received">{{vm.userStats.received}}</div>
+          <div class="label">Received</div>
         </div>
       </div>
     </div>
