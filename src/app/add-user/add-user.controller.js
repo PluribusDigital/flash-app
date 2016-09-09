@@ -6,13 +6,9 @@
     .controller('AddUserController', AddUserController);
 
   /** @ngInject */
-  function AddUserController($log, flashService, authService) {
+  function AddUserController($log, flashService) {
     var vm = this;
     vm.new_user = null;
-    vm.loggedInUser = null;
-    authService.getIdentity().then(function(identity) {
-      vm.loggedInUser = identity;
-    });
 
     vm.userFields = [
       {
@@ -38,10 +34,6 @@
       }
     ];
 
-    vm.userAutocompleteDataset = [];
-    flashService.resource('users').list().then(function(res) {
-      vm.userAutocompleteDataset = res.data.data;
-    });
 
     vm.submit = function() {
       var user = {};
