@@ -5,8 +5,14 @@
     <div class="alert-header">
       Your user has been added.
     </div>
-    Username: Test </br>
-    Password: Test
+    Username: {{vm.username}} </br>
+    Password: {{vm.password}}
+  </div>
+
+  <div ng-if="vm.userSubmitted == false" class="alert alert-danger">
+    <div class="alert-header">
+      User already exists.
+    </div>
   </div>
 
   <formly-form model="vm.new_user" fields="vm.userFields">
