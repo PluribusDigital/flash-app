@@ -54,6 +54,13 @@
         controllerAs: 'vm',
         resolve: { authenticate: authenticate }
       })
+      .state('add-user', {
+        url: '/add-user',
+        templateUrl: 'app/add-user/add-user.html',
+        controller: 'AddUserController',
+        controllerAs: 'vm',
+        resolve: { authenticate: authenticate }
+      })
       .state('admin', {
         url: '/admin',
         templateUrl: 'app/admin/admin.html',
