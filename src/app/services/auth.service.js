@@ -30,7 +30,7 @@
       if (identity) {
         return $q(function(resolve) {
           resolve(identity);
-        })
+        });
       } else if ($sessionStorage.userCredentials) {
         return authenticate($sessionStorage.userCredentials.username, $sessionStorage.userCredentials.password);
       }
@@ -38,7 +38,7 @@
       return $q(function(resolve, reject) {
         reject({
           message: 'Not logged in'
-        })
+        });
       });
     }
 

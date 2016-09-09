@@ -1,0 +1,16 @@
+<div class="add-user-form">
+  <h2>Add a New User</h2>
+
+  <div ng-if="vm.userSubmitted" class="alert alert-success">
+    <div class="alert-header">
+      Your user has been added.
+    </div>
+    Username: Test </br>
+    Password: Test
+  </div>
+
+  <formly-form model="vm.new_user" fields="vm.userFields">
+    <button type="submit" class="usa-button btn btn-default" ng-click="vm.submit()">Submit</button>
+  </formly-form>
+
+</div>
