@@ -11,14 +11,14 @@ Feature: User Login feature
       And I select the 'sign-in-button' button
      Then I should be on the home page
 
-  # Scenario Outline: Unsuccessful login
-  #   Given I am on the 'Login' page
-  #    When I fill in <username> for 'username'
-  #     And I fill in <password> for 'password'
-  #     And I select the 'sign-in-button' button
-  #    Then I should not see text 'MENU'
+  Scenario Outline: Unsuccessful login
+    Given I am on the 'Login' page
+     When I fill in <username> for 'username'
+      And I fill in <password> for 'password'
+      And I select the 'sign-in-button' button
+     Then I should not see text 'MENU'
 
-  # Examples:
-  #   | username              | password  |
-  #   | "gwashington"         | "foo"     |
-  #   | "gwash"               | "george1" |
+  Examples:
+    | username              | password  |
+    | "gwashington"         | "foo"     |
+    | "gwash"               | "george1" |

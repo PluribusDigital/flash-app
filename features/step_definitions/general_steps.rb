@@ -1,8 +1,9 @@
-Given /^I am on the '([^"]*)' page$/ do |page| 
-  path_for = {
-    'Home' => '/'
-  }
-  visit path_for[page]
+Given /^I am on the 'home' page$/ do  
+  visit "/"
+end
+
+Given /^I logout$/ do  
+  find("li.logout a").click
 end
 
 When /^I fill in '([^"]*)' for '([^"]*)'$/ do |value,field|
@@ -49,7 +50,7 @@ Given(/^I am logged in as '([^"]*)'$/) do |username|
     alincoln: 'abraham16'
   }
   steps %Q{
-    Given I am on the 'Login' page
+    Given I logout
      When I fill in '#{username}' for 'username'
       And I fill in '#{passwords[username]}' for 'password'
       And I select the 'sign-in-button' button
