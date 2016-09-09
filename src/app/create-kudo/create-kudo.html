@@ -1,0 +1,29 @@
+<div class="form-test">
+  <h2>Create Kudo</h2>
+
+  <div ng-if="vm.kudoSubmitted" class="alert alert-success">
+    Your kudo has been submitted. Fill out the form again to submit another kudo!</div>
+
+  <div class="form-group">
+    <label>Nominee</label>
+    <input type="text" ng-model="vm.nominee" placeholder="Find a user"
+      uib-typeahead="user as user.name for user in vm.userAutocompleteDataset | filter:{$: $viewValue}"
+      class="form-control"
+      typeahead-template-url="userAutocompleteSuggestion.html"
+      typeahead-show-hint="true"
+      typeahead-min-length="0">
+  </div>
+
+  <formly-form model="vm.kudo" fields="vm.kudoFields">
+
+    <button type="submit" class="usa-button btn btn-default" ng-click="vm.submit()">Submit</button>
+  </formly-form>
+</div>
+
+<script type="text/ng-template" id="userAutocompleteSuggestion.html">
+  <div>
+    <strong ng-bind-html="match.model.name | uibTypeaheadHighlight:query"></strong><br>
+    Title: <span ng-bind-html="match.model.title | uibTypeaheadHighlight:query"></span><br>
+    Organization: <span ng-bind-html="match.model.organization | uibTypeaheadHighlight:query"></span>
+  </div>
+</script>
