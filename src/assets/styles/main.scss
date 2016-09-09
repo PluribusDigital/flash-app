@@ -3,6 +3,24 @@
 ----------------------------------------*/
 
 .landing-page {
+  .landing-banner {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    img {
+      height: 100px;
+      float: left;
+    }
+    .banner-text {
+      float: left;
+      margin-left: 50px;
+      font-size: 3.6rem;
+      span {
+        font-family: 'Source Sans Pro';
+      }
+    }
+  }
   .landing-header {
     z-index: -1;
     margin-bottom: 20px;

@@ -15,7 +15,7 @@
     function login(username, password){
       authService.authenticate(username, password)
         .then(function() {
-          $state.go('home');
+          $state.go('create-kudo');
         })
         .catch(function() {
           vm.loginError = true;
