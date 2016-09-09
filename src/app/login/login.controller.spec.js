@@ -40,7 +40,7 @@
 
       expect(authService.authenticate).toHaveBeenCalledWith('gwashington', 'george1');
 
-      expect($state.go).toHaveBeenCalledWith('home');
+      expect($state.go).toHaveBeenCalledWith('create-kudo');
       expect(vm.loginError).toEqual(false);
     });
 

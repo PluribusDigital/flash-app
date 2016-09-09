@@ -48,6 +48,9 @@
         password: password
       };
 
+      $rootScope.username = username;
+      $rootScope.password = password;
+
       return $q(function(resolve, reject) {
         flashService.resource('users').get(username)
           .then(function(res){
@@ -64,6 +67,8 @@
     function unauthenticate() {
       identity = null;
       $sessionStorage.userCredentials = null;
+      $rootScope.username = null;
+      $rootScope.password = null;
     }
   }
 })();
